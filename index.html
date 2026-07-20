@@ -155,6 +155,7 @@
      ============================================================ -->
 <section class="hero" aria-label="Hero">
   <div class="hero-bg" style="background-image:url('images/hero-vineyard.jpg');"></div>
+  <div class="hero-bg-overlay-js" aria-hidden="true"></div>
   <div class="hero-particles" aria-hidden="true"></div>
   <div class="hero-content">
     <p class="hero-eyebrow">
@@ -166,19 +167,6 @@
       <span data-lang="en">Authentic Italian Wines from the Heart of Friuli</span>
       <span data-lang="it">Vini Italiani Autentici dal Cuore del Friuli</span>
     </p>
-    <p class="hero-desc">
-      <span data-lang="en">A family winery producing exceptional wines through 20+ years of dedication, tradition and passion on the red iron-rich soils of Friuli Venezia Giulia.</span>
-      <span data-lang="it">Un'azienda familiare che produce vini eccezionali con oltre 20 anni di dedizione, tradizione e passione sulle terre rosse ferrose del Friuli Venezia Giulia.</span>
-    </p>
-    <div class="hero-btns">
-      <a href="#collection" class="btn btn-primary">
-        <span data-lang="en">Explore Our Wines</span><span data-lang="it">Scopri i Vini</span>
-        <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-      </a>
-      <a href="#our-story" class="btn btn-outline">
-        <span data-lang="en">Our Story</span><span data-lang="it">La Nostra Storia</span>
-      </a>
-    </div>
   </div>
   <div class="hero-scroll" aria-hidden="true">
     <div class="scroll-line"></div>
@@ -207,6 +195,90 @@
     <span class="marquee-item">SOLEON <span class="marquee-dot"></span></span>
   </div>
 </div>
+
+<!-- ============================================================
+     INTRO LETTER
+     ============================================================ -->
+<section class="intro-letter" id="intro">
+  <div class="container">
+    <div class="intro-letter-grid">
+
+      <!-- Left: sticky meta panel -->
+      <div class="intro-letter-meta">
+        <img src="images/logo.png" alt="Terre Rosse Wines" class="intro-letter-logo reveal">
+
+        <!-- Awards recognised -->
+        <div class="intro-awards reveal reveal-delay-1">
+          <div class="intro-award-item">Guida Veronelli</div>
+          <div class="intro-award-item">Guida Bibenda</div>
+          <div class="intro-award-item">Guida Vitae</div>
+        </div>
+
+        <!-- Signature -->
+        <div class="intro-letter-sig reveal reveal-delay-2">
+          <div class="intro-sig-name">Adamo Lestani</div>
+          <div class="intro-sig-role">
+            <span data-lang="en">Owner &amp; Winemaker</span>
+            <span data-lang="it">Titolare &amp; Enologo</span>
+          </div>
+          <div style="margin-top:18px;font-family:var(--font-sans);font-size:0.78rem;font-weight:300;color:var(--mid-gray);line-height:1.7;">
+            Via XXV Aprile, 24<br>
+            33050 Cuccana di Bicinicco, UD<br>
+            <a href="tel:+393406071939" style="color:var(--gold);">(+39) 340 6071939</a><br>
+            <a href="mailto:info@terrerossewines.com" style="color:var(--gold);">info@terrerossewines.com</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right: letter body -->
+      <div class="intro-letter-body">
+
+        <!-- Italian version -->
+        <div data-lang-block="it">
+          <div class="intro-letter-eyebrow">L'Azienda</div>
+          <h2 class="intro-letter-headline reveal">Azienda Agricola<br>Terre Rosse</h2>
+          <p class="intro-letter-p reveal reveal-delay-1">
+            L'Azienda Agricola Terre Rosse affonda le proprie radici agricole in un lontano passato nella regione Friuli Venezia Giulia. Da vent'anni specializzata nella produzione di vino in Bicinicco, località situata nella Zona DOC Friuli Grave.
+          </p>
+          <p class="intro-letter-p reveal reveal-delay-2">
+            I membri della famiglia Lestani, fondatori dell'Azienda, si prendono cura delle viti con dedizione e passione per realizzare un vino di qualità; questo è ottenuto grazie ad un attento diradamento e selezione dei grappoli, nonché a tecniche agronomiche finalizzate alla conservazione e all'integrità dei vigneti.
+          </p>
+          <p class="intro-letter-p reveal reveal-delay-3">
+            La qualità dei prodotti di Terre Rosse è stata riconosciuta dalle principali guide di vini nazionali — <strong>Veronelli, Bibenda, Vitae</strong> — e l'ottimo rapporto qualità prezzo le ha permesso di conquistare rapidamente fette di mercato sia in Italia che all'Estero.
+          </p>
+          <div class="intro-letter-divider reveal"></div>
+          <p class="intro-letter-closing reveal reveal-delay-1">
+            Lo Staff di Terre Rosse è a Vostra completa disposizione per fornirvi qualsiasi ulteriore informazione.<br><br>
+            Cordiali saluti,<br>
+            <strong>Azienda Agricola Terre Rosse</strong>
+          </p>
+        </div>
+
+        <!-- English version -->
+        <div data-lang-block="en">
+          <div class="intro-letter-eyebrow">The Estate</div>
+          <h2 class="intro-letter-headline reveal">Azienda Agricola<br>Terre Rosse</h2>
+          <p class="intro-letter-p reveal reveal-delay-1">
+            We are a winery in Friuli-Venezia Giulia — Italy that produces D.O.C wines, rooted in the agricultural traditions of this extraordinary region. For more than twenty years, specialised in wine production in Bicinicco, in the DOC Friuli Grave zone.
+          </p>
+          <p class="intro-letter-p reveal reveal-delay-2">
+            The Lestani family, founders of the estate, tend the vines with dedication and passion. Quality is achieved through careful cluster thinning and selection, as well as agricultural techniques aimed at safeguarding the integrity of the vineyards.
+          </p>
+          <p class="intro-letter-p reveal reveal-delay-3">
+            The quality of our products has been confirmed by Italy's leading national wine guides — <strong>Veronelli, Bibenda and Vitae</strong> — and our excellent value for money has enabled us to rapidly gain market shares both in Italy and abroad.
+          </p>
+          <div class="intro-letter-divider reveal"></div>
+          <p class="intro-letter-closing reveal reveal-delay-1">
+            The Terre Rosse team is at your complete disposal to provide any further information.<br><br>
+            With warm regards,<br>
+            <strong>Azienda Agricola Terre Rosse</strong>
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ============================================================
      HERITAGE

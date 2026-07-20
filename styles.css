@@ -114,11 +114,13 @@ body.page-wines .lang-btn {
   color: var(--gold-light);
 }
 
-/* Language content switching */
-[data-lang="it"] { display: none; }
-[data-lang="en"] { display: inline; }
-.lang-it [data-lang="en"] { display: none; }
-.lang-it [data-lang="it"] { display: inline; }
+/* Language content switching — target span elements only, never buttons */
+span[data-lang="it"] { display: none; }
+span[data-lang="en"] { display: inline; }
+.lang-it span[data-lang="en"] { display: none; }
+.lang-it span[data-lang="it"] { display: inline; }
+
+/* Block-level language switching */
 .lang-it [data-lang-block="en"] { display: none !important; }
 .lang-it [data-lang-block="it"] { display: block !important; }
 [data-lang-block="it"] { display: none !important; }
@@ -209,7 +211,7 @@ body.page-wines .lang-btn {
 
 .header-logo-wrap { display: flex; justify-content: center; }
 .header-logo { display: flex; align-items: center; }
-.header-logo img { height: 62px; width: auto; object-fit: contain; }
+.header-logo img { height: 76px; width: auto; object-fit: contain; }
 
 .nav-left, .nav-right { display: flex; align-items: center; gap: 36px; }
 .nav-right { justify-content: flex-end; gap: 28px; }
@@ -307,9 +309,10 @@ body.page-wines .lang-btn {
 /* ============================================================
    HERO
    ============================================================ */
-.hero { position: relative; height: 100vh; min-height: 680px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
-.hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 30%; will-change: transform; }
-.hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(30,5,12,0.35) 0%, rgba(40,10,18,0.52) 50%, rgba(30,5,12,0.72) 100%); }
+.hero { position: relative; height: 92vh; min-height: 620px; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center 30%; will-change: transform; transform-origin: center center; }
+.hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(30,5,12,0.35) 0%, rgba(40,10,18,0.52) 50%, rgba(30,5,12,0.72) 100%); transition: none; }
+.hero-bg-overlay-js { position: absolute; inset: 0; z-index: 1; background: rgba(20,4,10,0); will-change: background; pointer-events: none; transition: none; }
 
 /* Animated particles */
 .hero-particles { position: absolute; inset: 0; z-index: 1; overflow: hidden; pointer-events: none; }
@@ -321,7 +324,7 @@ body.page-wines .lang-btn {
   animation: particleFloat linear infinite;
 }
 
-.hero-content { position: relative; z-index: 2; text-align: center; color: var(--white); max-width: 820px; padding: 0 24px; }
+.hero-content { position: relative; z-index: 2; text-align: center; color: var(--white); max-width: 820px; padding: 0 24px; will-change: opacity, transform, filter; transform-origin: center 60%; }
 
 .hero-eyebrow {
   font-family: var(--font-sans); font-size: 0.72rem; font-weight: 500; letter-spacing: 0.28em; text-transform: uppercase;
@@ -348,9 +351,172 @@ body.page-wines .lang-btn {
   animation: fadeUp 0.9s var(--ease-luxury) 0.7s forwards;
 }
 .hero-btns { display: flex; align-items: center; justify-content: center; gap: 16px; flex-wrap: wrap; opacity: 0; transform: translateY(20px); animation: fadeUp 0.9s var(--ease-luxury) 0.85s forwards; }
-.hero-scroll { position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 10px; color: rgba(255,255,255,0.6); font-family: var(--font-sans); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; animation: fadeUp 1s var(--ease-luxury) 1.2s both; }
+.hero-scroll { position: absolute; bottom: 36px; left: 50%; transform: translateX(-50%); z-index: 2; display: flex; flex-direction: column; align-items: center; gap: 10px; color: rgba(255,255,255,0.6); font-family: var(--font-sans); font-size: 0.65rem; font-weight: 500; letter-spacing: 0.2em; text-transform: uppercase; animation: fadeUp 1s var(--ease-luxury) 1.2s both; will-change: opacity, transform; transform-origin: bottom center; }
 .scroll-line { width: 1px; height: 44px; background: rgba(255,255,255,0.4); position: relative; overflow: hidden; }
 .scroll-line::after { content: ''; position: absolute; top: -100%; left: 0; right: 0; height: 100%; background: var(--gold); animation: scrollLine 1.8s var(--ease-smooth) infinite; }
+
+/* ============================================================
+   INTRO LETTER SECTION
+   ============================================================ */
+.intro-letter {
+  padding: 100px 0;
+  background: var(--light-cream);
+  position: relative;
+  overflow: hidden;
+}
+.intro-letter::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 2px;
+  background: linear-gradient(to right, transparent, var(--gold), transparent);
+}
+
+.intro-letter-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.05fr;
+  gap: 80px;
+  align-items: start;
+}
+
+.intro-letter-meta {
+  position: sticky;
+  top: 120px;
+}
+
+.intro-letter-logo {
+  width: 96px;
+  height: auto;
+  margin-bottom: 32px;
+  opacity: 0.85;
+}
+
+.intro-letter-sig {
+  margin-top: 40px;
+  padding-top: 28px;
+  border-top: 1px solid var(--border-color);
+}
+
+.intro-sig-name {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 400;
+  font-style: italic;
+  color: var(--wine-deep);
+  line-height: 1.2;
+  margin-bottom: 4px;
+}
+
+.intro-sig-role {
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
+.intro-awards {
+  margin-top: 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.intro-award-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--mid-gray);
+  transition: color var(--transition-fast);
+}
+
+.intro-award-item::before {
+  content: '';
+  display: block;
+  width: 18px; height: 1px;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+.intro-letter-body {
+  padding-top: 8px;
+}
+
+.intro-letter-eyebrow {
+  font-family: var(--font-sans);
+  font-size: 0.68rem;
+  font-weight: 600;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.intro-letter-eyebrow::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--border-color);
+}
+
+.intro-letter-headline {
+  font-family: var(--font-serif);
+  font-size: clamp(1.6rem, 2.5vw, 2.2rem);
+  font-weight: 500;
+  color: var(--wine-deep);
+  line-height: 1.25;
+  margin-bottom: 32px;
+}
+
+.intro-letter-p {
+  font-family: var(--font-sans);
+  font-size: 0.96rem;
+  font-weight: 300;
+  color: var(--mid-gray);
+  line-height: 1.9;
+  margin-bottom: 22px;
+  position: relative;
+}
+
+.intro-letter-p:first-of-type::first-letter {
+  font-family: var(--font-display);
+  font-size: 3.2rem;
+  font-weight: 400;
+  color: var(--wine-red);
+  float: left;
+  line-height: 0.82;
+  margin-right: 8px;
+  margin-top: 6px;
+}
+
+.intro-letter-divider {
+  width: 100%; height: 1px;
+  background: linear-gradient(to right, var(--border-color), transparent);
+  margin: 32px 0;
+}
+
+.intro-letter-closing {
+  font-family: var(--font-serif);
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--dark-gray);
+  line-height: 1.7;
+}
+
+@media (max-width: 900px) {
+  .intro-letter-grid { grid-template-columns: 1fr; gap: 48px; }
+  .intro-letter-meta { position: static; }
+  .intro-letter-p:first-of-type::first-letter { font-size: 2.6rem; }
+}
 
 /* ============================================================
    HERITAGE
@@ -495,9 +661,9 @@ body.page-wines .lang-btn {
    WINE CATALOG PAGES
    ============================================================ */
 .page-hero { position: relative; height: 500px; display: flex; align-items: flex-end; overflow: hidden; }
-.page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; }
+.page-hero-bg { position: absolute; inset: 0; background-size: cover; background-position: center; will-change: transform; transform-origin: center center; }
 .page-hero-bg::after { content: ''; position: absolute; inset: 0; background: linear-gradient(to bottom, rgba(30,5,12,0.4) 0%, rgba(30,5,12,0.78) 100%); }
-.page-hero-content { position: relative; z-index: 2; padding: 0 0 60px; color: var(--white); width: 100%; }
+.page-hero-content { position: relative; z-index: 2; padding: 0 0 60px; color: var(--white); width: 100%; will-change: opacity, transform, filter; }
 .page-hero-eyebrow { font-family: var(--font-sans); font-size: 0.7rem; font-weight: 500; letter-spacing: 0.24em; text-transform: uppercase; color: var(--gold); margin-bottom: 14px; }
 .page-hero-title { font-family: var(--font-display); font-size: clamp(3rem, 6vw, 5.5rem); font-weight: 300; line-height: 1.0; letter-spacing: 0.06em; text-transform: uppercase; margin-bottom: 16px; animation: fadeUp 0.9s var(--ease-luxury) 0.2s both; }
 .page-hero-sub { font-family: var(--font-serif); font-size: 1.15rem; font-style: italic; color: rgba(255,255,255,0.8); animation: fadeUp 0.9s var(--ease-luxury) 0.4s both; }

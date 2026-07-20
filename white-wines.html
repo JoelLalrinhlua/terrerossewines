@@ -4,549 +4,647 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>White Wines — Terre Rosse Wines</title>
-  <meta name="description" content="Discover the white wine collection of Terre Rosse Wines — Chardonnay, Friulano, Pinot Grigio, Sauvignon, Traminer Aromatico and Ribolla Gialla. Elegant, fresh and expressive wines from Friuli.">
-  <meta name="keywords" content="Terre Rosse white wines, Chardonnay, Friulano, Pinot Grigio, Sauvignon, Traminer, Ribolla Gialla, Friuli white wines">
-  <meta property="og:title" content="White Wines — Terre Rosse Wines">
-  <meta property="og:description" content="Elegant, fresh and expressive white wines from the heart of Friuli DOC Grave.">
-  <meta property="og:type" content="website">
+  <meta name="description" content="Discover Terre Rosse white wines: Chardonnay, Friulano, Pinot Grigio, Sauvignon, Traminer Aromatico, Ribolla Gialla, Noranse orange wine, SOLEON passito and Ribolla Gialla Brut sparkling. D.O.C. Friuli.">
   <meta name="theme-color" content="#3A0A14">
   <link rel="icon" type="image/png" href="images/logo.png">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body>
+<body class="page-wines">
 
-<!-- ============================================================
-     HEADER
-     ============================================================ -->
+<!-- Language Toggle -->
+<div class="lang-toggle-wrap" role="group" aria-label="Language selection">
+  <button class="lang-btn active" data-lang="en">EN</button>
+  <button class="lang-btn" data-lang="it">IT</button>
+</div>
+
+<!-- HEADER -->
 <header class="site-header" role="banner">
   <div class="header-inner">
-    <nav class="nav-left" aria-label="Primary navigation left">
-      <a href="index.html" class="nav-link">Home</a>
-      <a href="index.html#our-story" class="nav-link">Our Story</a>
+    <nav class="nav-left">
+      <a href="index.html" class="nav-link"><span data-lang="en">Home</span><span data-lang="it">Home</span></a>
+      <a href="index.html#our-story" class="nav-link"><span data-lang="en">Our Story</span><span data-lang="it">La Nostra Storia</span></a>
       <div class="wines-trigger nav-link active" aria-haspopup="true" aria-expanded="false" tabindex="0">
-        Wines
-        <svg class="chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
-          <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
+        <span data-lang="en">Wines</span><span data-lang="it">Vini</span>
+        <svg class="chevron" viewBox="0 0 10 6" fill="none"><path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </div>
     </nav>
     <div class="header-logo-wrap">
-      <a href="index.html" class="header-logo" aria-label="Terre Rosse Wines — Home">
+      <a href="index.html" class="header-logo">
         <img src="images/logo.png" alt="Terre Rosse Wines" class="header-logo-light">
         <img src="images/logo.png" alt="Terre Rosse Wines" class="header-logo-dark" style="display:none">
       </a>
     </div>
-    <nav class="nav-right" aria-label="Primary navigation right">
-      <a href="index.html#visit-us" class="nav-link">Visit Us</a>
-      <a href="index.html#contact" class="nav-link">Contact</a>
-      <button class="mobile-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
-        <span></span><span></span><span></span>
-      </button>
+    <nav class="nav-right">
+      <a href="index.html#visit-us" class="nav-link"><span data-lang="en">Visit Us</span><span data-lang="it">Visitaci</span></a>
+      <a href="index.html#contact" class="nav-link"><span data-lang="en">Contact</span><span data-lang="it">Contatti</span></a>
+      <button class="mobile-toggle" aria-label="Open menu"><span></span><span></span><span></span></button>
     </nav>
   </div>
 </header>
 
 <!-- Mega Menu -->
-<nav class="mega-menu" id="mega-menu" role="navigation" aria-label="Wines collection">
+<nav class="mega-menu" id="mega-menu">
   <div class="mega-menu-inner">
-    <div class="mega-col">
+    <a href="red-wines.html" class="mega-col" style="text-decoration:none;display:block">
       <img src="images/category-red.jpg" alt="Red Wines" class="mega-col-img">
-      <div class="mega-col-eyebrow">Collection</div>
-      <div class="mega-col-title">Red Wines</div>
-      <p class="mega-col-desc">Bold and structured reds from Cabernet Franc, Merlot and native Refosco varieties.</p>
-      <a href="red-wines.html" class="mega-col-link">Explore Red Wines <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    </div>
-    <div class="mega-col">
+      <div class="mega-col-eyebrow"><span data-lang="en">Collection</span><span data-lang="it">Collezione</span></div>
+      <div class="mega-col-title"><span data-lang="en">Red Wines</span><span data-lang="it">Vini Rossi</span></div>
+      <p class="mega-col-desc"><span data-lang="en">Cabernet Franc, Merlot, Refosco, Rosso unAmì, Mea Culpa, Vinea Mea Electa, Pinot Nero.</span><span data-lang="it">Cabernet Franc, Merlot, Refosco, Rosso unAmì, Mea Culpa, Vinea Mea Electa, Pinot Nero.</span></p>
+      <span class="mega-col-link"><span data-lang="en">Explore</span><span data-lang="it">Scopri</span> <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </a>
+    <a href="white-wines.html" class="mega-col" style="text-decoration:none;display:block">
       <img src="images/category-white.jpg" alt="White Wines" class="mega-col-img">
-      <div class="mega-col-eyebrow">Collection</div>
-      <div class="mega-col-title">White Wines</div>
-      <p class="mega-col-desc">Elegant and expressive whites — Chardonnay, Friulano, Pinot Grigio and beyond.</p>
-      <a href="white-wines.html" class="mega-col-link">Explore White Wines <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    </div>
-    <div class="mega-col">
-      <img src="images/category-orange.jpg" alt="Orange Wine" class="mega-col-img">
-      <div class="mega-col-eyebrow">Featured</div>
-      <div class="mega-col-title">Orange Wine</div>
-      <p class="mega-col-desc">Skin-contact wines of remarkable depth, amber hue and complex character.</p>
-      <a href="index.html#collection" class="mega-col-link">Discover <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    </div>
-    <div class="mega-col">
-      <img src="images/category-sparkling.jpg" alt="Sparkling Wine" class="mega-col-img">
-      <div class="mega-col-eyebrow">Featured</div>
-      <div class="mega-col-title">Sparkling Wine</div>
-      <p class="mega-col-desc">Celebratory bubbles born from the freshness and vitality of Friuli's terroir.</p>
-      <a href="index.html#collection" class="mega-col-link">Discover <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-    </div>
+      <div class="mega-col-eyebrow"><span data-lang="en">Collection</span><span data-lang="it">Collezione</span></div>
+      <div class="mega-col-title"><span data-lang="en">White Wines</span><span data-lang="it">Vini Bianchi</span></div>
+      <p class="mega-col-desc"><span data-lang="en">Chardonnay, Friulano, Pinot Grigio, Sauvignon, Traminer Aromatico, Ribolla Gialla.</span><span data-lang="it">Chardonnay, Friulano, Pinot Grigio, Sauvignon, Traminer Aromatico, Ribolla Gialla.</span></p>
+      <span class="mega-col-link"><span data-lang="en">Explore</span><span data-lang="it">Scopri</span> <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </a>
+    <a href="white-wines.html#noranse" class="mega-col" style="text-decoration:none;display:block">
+      <img src="images/category-orange.jpg" alt="Noranse" class="mega-col-img">
+      <div class="mega-col-eyebrow"><span data-lang="en">Specialty</span><span data-lang="it">Specialità</span></div>
+      <div class="mega-col-title">Noranse</div>
+      <p class="mega-col-desc"><span data-lang="en">I.G.T. Venezia Giulia. Skin-macerated Ribolla Gialla — amber, complex, extraordinary.</span><span data-lang="it">I.G.T. Venezia Giulia. Ribolla Gialla macerata sulle bucce — ambrata, complessa, straordinaria.</span></p>
+      <span class="mega-col-link"><span data-lang="en">Discover</span><span data-lang="it">Scopri</span> <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </a>
+    <a href="white-wines.html#ribolla-brut" class="mega-col" style="text-decoration:none;display:block">
+      <img src="images/category-sparkling.jpg" alt="Ribolla Gialla Brut" class="mega-col-img">
+      <div class="mega-col-eyebrow"><span data-lang="en">Sparkling</span><span data-lang="it">Spumante</span></div>
+      <div class="mega-col-title">Ribolla Gialla Brut</div>
+      <p class="mega-col-desc"><span data-lang="en">Brut sparkling wine from native Ribolla Gialla — fine persistent perlage, floral and fresh.</span><span data-lang="it">Spumante brut da Ribolla Gialla autoctona — perlage fine e persistente, floreale e fresco.</span></p>
+      <span class="mega-col-link"><span data-lang="en">Discover</span><span data-lang="it">Scopri</span> <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg></span>
+    </a>
   </div>
 </nav>
 
-<div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
-<nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+<div class="mobile-overlay" id="mobile-overlay"></div>
+<nav class="mobile-drawer" id="mobile-drawer">
   <div class="mobile-drawer-head">
     <img src="images/logo.png" alt="Terre Rosse Wines">
-    <button class="mobile-close" aria-label="Close navigation">&times;</button>
+    <button class="mobile-close">&times;</button>
   </div>
   <div class="mobile-nav">
     <a href="index.html" class="mobile-nav-item">Home</a>
-    <a href="index.html#our-story" class="mobile-nav-item">Our Story</a>
-    <div class="mobile-nav-item" style="color:var(--gold);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;font-family:var(--font-sans);padding-top:20px;">Wines Collection</div>
+    <a href="index.html#our-story" class="mobile-nav-item"><span data-lang="en">Our Story</span><span data-lang="it">La Nostra Storia</span></a>
+    <div class="mobile-nav-item" style="color:var(--gold);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;font-family:var(--font-sans);padding-top:20px;"><span data-lang="en">Wines</span><span data-lang="it">Vini</span></div>
     <div class="mobile-nav-sub">
-      <a href="red-wines.html" class="mobile-nav-sub-item">Red Wines</a>
-      <a href="white-wines.html" class="mobile-nav-sub-item">White Wines</a>
-      <a href="index.html#collection" class="mobile-nav-sub-item">Orange Wine</a>
-      <a href="index.html#collection" class="mobile-nav-sub-item">Sparkling Wine</a>
+      <a href="red-wines.html" class="mobile-nav-sub-item"><span data-lang="en">Red Wines</span><span data-lang="it">Vini Rossi</span></a>
+      <a href="white-wines.html" class="mobile-nav-sub-item"><span data-lang="en">White Wines</span><span data-lang="it">Vini Bianchi</span></a>
+      <a href="white-wines.html#noranse" class="mobile-nav-sub-item">Noranse</a>
+      <a href="white-wines.html#ribolla-brut" class="mobile-nav-sub-item">Ribolla Gialla Brut</a>
+      <a href="white-wines.html#soleon" class="mobile-nav-sub-item">SOLEON</a>
     </div>
-    <a href="index.html#visit-us" class="mobile-nav-item">Visit Us</a>
-    <a href="index.html#contact" class="mobile-nav-item">Contact</a>
+    <a href="index.html#visit-us" class="mobile-nav-item"><span data-lang="en">Visit Us</span><span data-lang="it">Visitaci</span></a>
+    <a href="index.html#contact" class="mobile-nav-item"><span data-lang="en">Contact</span><span data-lang="it">Contatti</span></a>
+    <div style="padding:20px 32px;display:flex;gap:10px;">
+      <button class="lang-btn" data-lang="en" style="border:1px solid var(--border-color);border-radius:2px;color:var(--mid-gray);flex:1;padding:10px;font-size:0.75rem;letter-spacing:0.1em;">EN</button>
+      <button class="lang-btn" data-lang="it" style="border:1px solid var(--border-color);border-radius:2px;color:var(--mid-gray);flex:1;padding:10px;font-size:0.75rem;letter-spacing:0.1em;">IT</button>
+    </div>
   </div>
 </nav>
 
 <main id="main-content">
 
-<!-- ============================================================
-     PAGE HERO
-     ============================================================ -->
-<section class="page-hero" aria-label="White Wines" style="--hero-overlay: rgba(240,230,200,0.15)">
-  <div class="page-hero-bg" style="background-image: url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85&auto=format&fit=crop&crop=center');"></div>
-  <div class="page-hero-content" style="background: linear-gradient(to bottom, rgba(30,18,8,0.5) 0%, rgba(60,35,10,0.78) 100%); padding: 0;">
-  </div>
-</section>
-<!-- Re-do hero overlay correctly -->
-<style>
-  .page-hero-white .page-hero-bg::after {
-    background: linear-gradient(to bottom, rgba(30,18,5,0.42) 0%, rgba(58,20,8,0.75) 100%);
-  }
-</style>
-
-<!-- White wines hero done inline -->
-<section style="position:relative;height:500px;display:flex;align-items:flex-end;overflow:hidden;" aria-label="White Wines">
-  <div style="position:absolute;inset:0;background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85&auto=format&fit=crop&crop=center');background-size:cover;background-position:center;"></div>
-  <div style="position:absolute;inset:0;background:linear-gradient(to bottom, rgba(30,20,5,0.38) 0%, rgba(58,30,5,0.78) 100%);"></div>
-  <div class="container" style="position:relative;z-index:2;padding-bottom:60px;color:white;">
-    <p style="font-family:var(--font-sans);font-size:0.7rem;font-weight:500;letter-spacing:0.24em;text-transform:uppercase;color:var(--gold);margin-bottom:14px;">The Collection</p>
-    <h1 style="font-family:var(--font-display);font-size:clamp(3rem,6vw,5.5rem);font-weight:300;line-height:1.0;letter-spacing:0.06em;text-transform:uppercase;margin-bottom:16px;">White Wines</h1>
-    <p style="font-family:var(--font-serif);font-size:1.15rem;font-style:italic;color:rgba(255,255,255,0.82);">Elegant, fresh and expressive wines from the heart of Friuli.</p>
+<!-- PAGE HERO -->
+<section class="page-hero">
+  <div class="page-hero-bg" style="background-image:url('https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1920&q=85&auto=format&fit=crop&crop=center');"></div>
+  <div class="container">
+    <div class="page-hero-content">
+      <p class="page-hero-eyebrow"><span data-lang="en">The Collection</span><span data-lang="it">La Collezione</span></p>
+      <h1 class="page-hero-title"><span data-lang="en">White Wines</span><span data-lang="it">Vini Bianchi</span></h1>
+      <p class="page-hero-sub"><span data-lang="en">Fresh, elegant and aromatic — expressing the soul of Friuli's native grapes.</span><span data-lang="it">Freschi, eleganti e aromatici — espressione dell'anima dei vitigni autoctoni friulani.</span></p>
+    </div>
   </div>
 </section>
 
-<!-- ============================================================
-     WINE CATALOG
-     ============================================================ -->
+<!-- WINE CATALOG -->
 <section class="wine-catalog">
   <div class="container">
 
     <!-- 1. Chardonnay -->
-    <article class="wine-entry" aria-label="Chardonnay">
-      <div class="wine-entry-bottle" style="background:linear-gradient(145deg, #f0eadb 0%, #ece2cc 100%)">
-        <svg width="90" height="300" viewBox="0 0 90 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Chardonnay bottle illustration">
-          <rect x="36" y="2" width="18" height="24" rx="4" fill="rgba(197,165,90,0.55)" stroke="rgba(197,165,90,0.4)" stroke-width="0.8"/>
-          <path d="M28 40 Q24 64 22 90 L22 265 Q22 285 45 285 Q68 285 68 265 L68 90 Q66 64 62 40 Z" fill="rgba(210,180,100,0.12)" stroke="rgba(180,150,70,0.5)" stroke-width="1"/>
-          <path d="M28 40 L62 40 Q68 52 68 68" fill="none" stroke="rgba(180,150,70,0.45)" stroke-width="1"/>
-          <rect x="28" y="108" width="34" height="72" rx="1.5" fill="rgba(255,255,255,0.4)" stroke="rgba(139,90,40,0.3)" stroke-width="0.8"/>
-          <line x1="28" y1="128" x2="62" y2="128" stroke="rgba(139,90,40,0.2)" stroke-width="0.5"/>
-          <line x1="28" y1="162" x2="62" y2="162" stroke="rgba(139,90,40,0.2)" stroke-width="0.5"/>
-          <text x="45" y="143" text-anchor="middle" fill="rgba(58,10,20,0.8)" font-size="6.5" font-family="Georgia, serif" letter-spacing="1">TERRE ROSSE</text>
-          <text x="45" y="155" text-anchor="middle" fill="rgba(58,10,20,0.6)" font-size="5" font-family="Arial, sans-serif" letter-spacing="0.5">CHARDONNAY</text>
-          <text x="45" y="174" text-anchor="middle" fill="rgba(58,10,20,0.4)" font-size="4" font-family="Arial, sans-serif">Friuli DOC Grave</text>
+    <article class="wine-entry" id="chardonnay">
+      <div class="wine-entry-bottle">
+        <svg width="100" height="320" viewBox="0 0 100 320" fill="none">
+          <rect x="40" y="2" width="20" height="28" rx="5" fill="rgba(210,190,90,0.4)" stroke="rgba(180,160,60,0.5)" stroke-width="1"/>
+          <path d="M30 44 Q26 70 24 98 L24 284 Q24 300 50 300 Q76 300 76 284 L76 98 Q74 70 70 44 Z" fill="rgba(210,190,90,0.12)" stroke="rgba(180,160,60,0.45)" stroke-width="1.2"/>
+          <path d="M30 44 L70 44 Q76 58 76 76" fill="none" stroke="rgba(180,160,60,0.35)" stroke-width="1"/>
+          <rect x="30" y="118" width="40" height="78" rx="2" fill="rgba(255,255,255,0.5)" stroke="rgba(180,160,60,0.35)" stroke-width="1"/>
+          <line x1="30" y1="140" x2="70" y2="140" stroke="rgba(100,80,20,0.15)" stroke-width="0.6"/>
+          <line x1="30" y1="176" x2="70" y2="176" stroke="rgba(100,80,20,0.15)" stroke-width="0.6"/>
+          <text x="50" y="156" text-anchor="middle" fill="rgba(58,10,20,0.75)" font-size="6.5" font-family="Georgia,serif" letter-spacing="0.5">TERRE ROSSE</text>
+          <text x="50" y="168" text-anchor="middle" fill="rgba(58,10,20,0.55)" font-size="5" font-family="Arial,sans-serif">CHARDONNAY</text>
+          <text x="50" y="185" text-anchor="middle" fill="rgba(58,10,20,0.4)" font-size="4" font-family="Arial,sans-serif">D.O.C. Friuli</text>
         </svg>
       </div>
       <div class="wine-entry-details">
         <div class="wine-entry-number">01</div>
-        <div class="wine-entry-eyebrow">White Wine · Friuli DOC Grave</div>
+        <div class="wine-entry-eyebrow">D.O.C. Friuli · <span data-lang="en">White Wine</span><span data-lang="it">Vino Bianco</span></div>
         <h2 class="wine-entry-name">Chardonnay</h2>
         <p class="wine-entry-story">
-          The international ambassador of Terre Rosse, this Chardonnay captures the remarkable freshness that defines Friulian viticulture. Vinified in stainless steel to preserve its natural aromatics, this wine speaks of the estate's cool night temperatures and mineral-rich soils — a wine of immediacy and charm that balances Burgundian elegance with unmistakably Italian character.
+          <span data-lang="en">A white, still, dry wine. Its straw yellow colour shows golden hues. On the nose it is intense with notes of butter, white flowers, peach and banana — then evolving to ripe tropical fruits of pineapple and mango. The palate shows good structure, fullness and long persistence. Excellent with seafood and shellfish, grilled fish, soups and risottos.</span>
+          <span data-lang="it">Vino bianco, fermo, secco. Colore giallo paglierino con riflessi dorati. Al naso è intenso, con note di burro, fiori bianchi, pesca e banana; evolve poi verso frutta tropicale matura di ananas e mango. Al palato presenta buona struttura, pienezza e lunga persistenza. Ottimo con frutti di mare e crostacei, risulta perfetto anche con piatti a base di pesce alla griglia, zuppe e risotti.</span>
         </p>
         <div class="wine-entry-tech">
-          <div class="tech-item">
-            <div class="tech-label">Grape Variety</div>
-            <div class="tech-value">100% Chardonnay</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Vinification</div>
-            <div class="tech-value">Stainless Steel</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Serving Temperature</div>
-            <div class="tech-value">10 – 12°C</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Alcohol</div>
-            <div class="tech-value">12.5% vol.</div>
-          </div>
+          <div class="tech-item"><div class="tech-label">Uve / Grapes</div><div class="tech-value">100% Chardonnay</div></div>
+          <div class="tech-item"><div class="tech-label">Classificazione</div><div class="tech-value">D.O.C. Friuli</div></div>
+          <div class="tech-item"><div class="tech-label">Servire / Serving Temp.</div><div class="tech-value">10°C – 14°C</div></div>
+          <div class="tech-item"><div class="tech-label">Alcol / Alcohol</div><div class="tech-value">12.5% – 13.5% vol.</div></div>
+          <div class="tech-item"><div class="tech-label">Allevamento / Training</div><div class="tech-value">Guyot 5000 viti/ha</div></div>
+          <div class="tech-item"><div class="tech-label">Vendemmia / Harvest</div><div class="tech-value"><span data-lang="en">First week of September</span><span data-lang="it">Prima settimana di settembre</span></div></div>
         </div>
         <div class="wine-entry-tasting">
-          <div class="tasting-title">Tasting Notes</div>
+          <div class="tasting-title"><span data-lang="en">Tasting Notes</span><span data-lang="it">Note di Degustazione</span></div>
           <div class="tasting-notes">
-            <span class="tasting-note">Green Apple</span>
-            <span class="tasting-note">Pear</span>
-            <span class="tasting-note">Citrus Blossom</span>
-            <span class="tasting-note">White Peach</span>
-            <span class="tasting-note">Mineral</span>
+            <span class="tasting-note"><span data-lang="en">Golden Straw Yellow</span><span data-lang="it">Giallo Paglierino Dorato</span></span>
+            <span class="tasting-note"><span data-lang="en">Butter &amp; White Flowers</span><span data-lang="it">Burro &amp; Fiori Bianchi</span></span>
+            <span class="tasting-note"><span data-lang="en">Peach &amp; Banana</span><span data-lang="it">Pesca &amp; Banana</span></span>
+            <span class="tasting-note"><span data-lang="en">Pineapple</span><span data-lang="it">Ananas</span></span>
+            <span class="tasting-note"><span data-lang="en">Long Persistence</span><span data-lang="it">Lunga Persistenza</span></span>
           </div>
         </div>
         <div class="wine-entry-food">
-          <div class="food-title">Food Pairings</div>
+          <div class="food-title"><span data-lang="en">Food Pairings</span><span data-lang="it">Abbinamenti</span></div>
           <div class="food-pairings">
-            <span class="food-tag">Seafood Risotto</span>
-            <span class="food-tag">Grilled Sea Bass</span>
-            <span class="food-tag">White Meat</span>
-            <span class="food-tag">Fresh Cheeses</span>
+            <span class="food-tag"><span data-lang="en">Seafood &amp; Shellfish</span><span data-lang="it">Frutti di Mare &amp; Crostacei</span></span>
+            <span class="food-tag"><span data-lang="en">Grilled Fish</span><span data-lang="it">Pesce alla Griglia</span></span>
+            <span class="food-tag"><span data-lang="en">Risottos</span><span data-lang="it">Risotti</span></span>
           </div>
         </div>
-        <a href="index.html#contact" class="btn btn-dark">
-          View Details
-          <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        <a href="index.html#contact" class="btn btn-dark"><span data-lang="en">Enquire</span><span data-lang="it">Richiedi Info</span> <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </article>
 
     <!-- 2. Friulano (reversed) -->
-    <article class="wine-entry reverse" aria-label="Friulano">
-      <div class="wine-entry-bottle" style="background:linear-gradient(145deg, #eee8d8 0%, #e5dcc5 100%)">
-        <svg width="90" height="300" viewBox="0 0 90 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Friulano bottle illustration">
-          <rect x="36" y="2" width="18" height="24" rx="4" fill="rgba(160,130,60,0.6)" stroke="rgba(160,130,60,0.4)" stroke-width="0.8"/>
-          <path d="M28 40 Q24 64 22 90 L22 265 Q22 285 45 285 Q68 285 68 265 L68 90 Q66 64 62 40 Z" fill="rgba(190,160,80,0.1)" stroke="rgba(160,130,60,0.45)" stroke-width="1"/>
-          <path d="M28 40 L62 40 Q68 52 68 68" fill="none" stroke="rgba(160,130,60,0.4)" stroke-width="1"/>
-          <rect x="28" y="108" width="34" height="72" rx="1.5" fill="rgba(255,255,255,0.45)" stroke="rgba(100,70,20,0.3)" stroke-width="0.8"/>
-          <line x1="28" y1="128" x2="62" y2="128" stroke="rgba(100,70,20,0.18)" stroke-width="0.5"/>
-          <line x1="28" y1="162" x2="62" y2="162" stroke="rgba(100,70,20,0.18)" stroke-width="0.5"/>
-          <text x="45" y="143" text-anchor="middle" fill="rgba(58,10,20,0.82)" font-size="6.5" font-family="Georgia, serif" letter-spacing="1">TERRE ROSSE</text>
-          <text x="45" y="155" text-anchor="middle" fill="rgba(58,10,20,0.62)" font-size="5" font-family="Arial, sans-serif" letter-spacing="0.5">FRIULANO</text>
-          <text x="45" y="174" text-anchor="middle" fill="rgba(58,10,20,0.4)" font-size="4" font-family="Arial, sans-serif">Friuli DOC Grave</text>
+    <article class="wine-entry reverse" id="friulano">
+      <div class="wine-entry-bottle">
+        <svg width="100" height="320" viewBox="0 0 100 320" fill="none">
+          <rect x="40" y="2" width="20" height="28" rx="5" fill="rgba(195,175,75,0.45)" stroke="rgba(165,145,55,0.5)" stroke-width="1"/>
+          <path d="M30 44 Q26 70 24 98 L24 284 Q24 300 50 300 Q76 300 76 284 L76 98 Q74 70 70 44 Z" fill="rgba(200,180,80,0.12)" stroke="rgba(165,145,55,0.45)" stroke-width="1.2"/>
+          <path d="M30 44 L70 44 Q76 58 76 76" fill="none" stroke="rgba(165,145,55,0.35)" stroke-width="1"/>
+          <rect x="30" y="118" width="40" height="78" rx="2" fill="rgba(255,255,255,0.45)" stroke="rgba(165,145,55,0.35)" stroke-width="1"/>
+          <line x1="30" y1="140" x2="70" y2="140" stroke="rgba(80,60,10,0.15)" stroke-width="0.6"/>
+          <line x1="30" y1="176" x2="70" y2="176" stroke="rgba(80,60,10,0.15)" stroke-width="0.6"/>
+          <text x="50" y="156" text-anchor="middle" fill="rgba(58,10,20,0.75)" font-size="6.5" font-family="Georgia,serif" letter-spacing="0.5">TERRE ROSSE</text>
+          <text x="50" y="168" text-anchor="middle" fill="rgba(58,10,20,0.55)" font-size="5.5" font-family="Arial,sans-serif">FRIULANO</text>
+          <text x="50" y="185" text-anchor="middle" fill="rgba(58,10,20,0.4)" font-size="4" font-family="Arial,sans-serif">D.O.C. Friuli</text>
         </svg>
       </div>
       <div class="wine-entry-details">
         <div class="wine-entry-number">02</div>
-        <div class="wine-entry-eyebrow">White Wine · Native Variety</div>
+        <div class="wine-entry-eyebrow">D.O.C. Friuli · <span data-lang="en">Native Variety</span><span data-lang="it">Vitigno Autoctono</span></div>
         <h2 class="wine-entry-name">Friulano</h2>
         <p class="wine-entry-story">
-          Once called Tocai Friulano, this indigenous grape is the beating heart of Friulian wine culture. At Terre Rosse, it finds its most authentic expression: dry, mineral and gently bitter at the finish — a wine that has accompanied the tables of this region for centuries. Pair it with the legendary Prosciutto di San Daniele for an experience that is purely, joyfully Friulian.
+          <span data-lang="en">A white, still, dry wine from native grapes — straw yellow with good consistency. The nose is intense, graceful and elegant. We recognise hay, pear and fresh white flowers. The palate is fresh and enveloping, finishing with a delicious almond note — the true soul of Friuli. Pairs beautifully with San Daniele prosciutto, culatello and medium-aged cheeses.</span>
+          <span data-lang="it">Vino bianco, fermo, secco da vitigno autoctono. Colore giallo paglierino carico dalla bella consistenza. Il profumo è notevole, aggraziato, elegante: riconosciamo il fieno, la pera, i fiori bianchi freschi. Fresco e sapido in bocca, decisamente avvolgente, termina con una deliziosa mandorla — l'anima del Friuli. Affettati dolci come Prosciutto di San Daniele o culatello, ottimo con formaggi a media stagionatura.</span>
         </p>
         <div class="wine-entry-tech">
-          <div class="tech-item">
-            <div class="tech-label">Grape Variety</div>
-            <div class="tech-value">100% Friulano</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Origin</div>
-            <div class="tech-value">Indigenous — Friuli</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Serving Temperature</div>
-            <div class="tech-value">10 – 12°C</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Alcohol</div>
-            <div class="tech-value">12.5% vol.</div>
-          </div>
+          <div class="tech-item"><div class="tech-label">Uve / Grapes</div><div class="tech-value">100% Friulano</div></div>
+          <div class="tech-item"><div class="tech-label">Classificazione</div><div class="tech-value">D.O.C. Friuli</div></div>
+          <div class="tech-item"><div class="tech-label">Servire / Serving Temp.</div><div class="tech-value">10°C – 12°C</div></div>
+          <div class="tech-item"><div class="tech-label">Alcol / Alcohol</div><div class="tech-value">12.5% – 14% vol.</div></div>
+          <div class="tech-item"><div class="tech-label">Allevamento / Training</div><div class="tech-value">Guyot 5000 viti/ha</div></div>
+          <div class="tech-item"><div class="tech-label">Vendemmia / Harvest</div><div class="tech-value"><span data-lang="en">Second week of September</span><span data-lang="it">Seconda settimana di settembre</span></div></div>
         </div>
         <div class="wine-entry-tasting">
-          <div class="tasting-title">Tasting Notes</div>
+          <div class="tasting-title"><span data-lang="en">Tasting Notes</span><span data-lang="it">Note di Degustazione</span></div>
           <div class="tasting-notes">
-            <span class="tasting-note">White Almond</span>
-            <span class="tasting-note">Golden Apple</span>
-            <span class="tasting-note">White Flowers</span>
-            <span class="tasting-note">Herbs</span>
-            <span class="tasting-note">Bitter Finish</span>
+            <span class="tasting-note"><span data-lang="en">Straw Yellow</span><span data-lang="it">Giallo Paglierino</span></span>
+            <span class="tasting-note"><span data-lang="en">Hay &amp; Pear</span><span data-lang="it">Fieno &amp; Pera</span></span>
+            <span class="tasting-note"><span data-lang="en">Fresh White Flowers</span><span data-lang="it">Fiori Bianchi Freschi</span></span>
+            <span class="tasting-note"><span data-lang="en">Almond Finish</span><span data-lang="it">Chiusura di Mandorla</span></span>
           </div>
         </div>
         <div class="wine-entry-food">
-          <div class="food-title">Food Pairings</div>
+          <div class="food-title"><span data-lang="en">Food Pairings</span><span data-lang="it">Abbinamenti</span></div>
           <div class="food-pairings">
-            <span class="food-tag">Prosciutto di San Daniele</span>
-            <span class="food-tag">Grilled Fish</span>
-            <span class="food-tag">Light Antipasto</span>
-            <span class="food-tag">Soft Cheeses</span>
+            <span class="food-tag"><span data-lang="en">San Daniele Prosciutto</span><span data-lang="it">Prosciutto di San Daniele</span></span>
+            <span class="food-tag">Culatello</span>
+            <span class="food-tag"><span data-lang="en">Medium-aged Cheeses</span><span data-lang="it">Formaggi a Media Stagionatura</span></span>
           </div>
         </div>
-        <a href="index.html#contact" class="btn btn-dark">
-          View Details
-          <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        <a href="index.html#contact" class="btn btn-dark"><span data-lang="en">Enquire</span><span data-lang="it">Richiedi Info</span> <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </article>
 
     <!-- 3. Pinot Grigio -->
-    <article class="wine-entry" aria-label="Pinot Grigio">
-      <div class="wine-entry-bottle" style="background:linear-gradient(145deg, #f2ede4 0%, #ece4d0 100%)">
-        <svg width="90" height="300" viewBox="0 0 90 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Pinot Grigio bottle illustration">
-          <rect x="36" y="2" width="18" height="24" rx="4" fill="rgba(175,155,90,0.55)" stroke="rgba(175,155,90,0.4)" stroke-width="0.8"/>
-          <path d="M28 40 Q24 64 22 90 L22 265 Q22 285 45 285 Q68 285 68 265 L68 90 Q66 64 62 40 Z" fill="rgba(190,170,100,0.1)" stroke="rgba(175,155,90,0.45)" stroke-width="1"/>
-          <path d="M28 40 L62 40 Q68 52 68 68" fill="none" stroke="rgba(175,155,90,0.4)" stroke-width="1"/>
-          <rect x="28" y="108" width="34" height="72" rx="1.5" fill="rgba(255,255,255,0.45)" stroke="rgba(100,80,30,0.28)" stroke-width="0.8"/>
-          <line x1="28" y1="128" x2="62" y2="128" stroke="rgba(100,80,30,0.18)" stroke-width="0.5"/>
-          <line x1="28" y1="162" x2="62" y2="162" stroke="rgba(100,80,30,0.18)" stroke-width="0.5"/>
-          <text x="45" y="143" text-anchor="middle" fill="rgba(58,10,20,0.8)" font-size="6.5" font-family="Georgia, serif" letter-spacing="1">TERRE ROSSE</text>
-          <text x="45" y="155" text-anchor="middle" fill="rgba(58,10,20,0.6)" font-size="4.5" font-family="Arial, sans-serif" letter-spacing="0.5">PINOT GRIGIO</text>
-          <text x="45" y="174" text-anchor="middle" fill="rgba(58,10,20,0.38)" font-size="4" font-family="Arial, sans-serif">Friuli DOC Grave</text>
+    <article class="wine-entry" id="pinot-grigio">
+      <div class="wine-entry-bottle">
+        <svg width="100" height="320" viewBox="0 0 100 320" fill="none">
+          <rect x="40" y="2" width="20" height="28" rx="5" fill="rgba(175,165,140,0.5)" stroke="rgba(145,135,110,0.5)" stroke-width="1"/>
+          <path d="M30 44 Q26 70 24 98 L24 284 Q24 300 50 300 Q76 300 76 284 L76 98 Q74 70 70 44 Z" fill="rgba(175,165,140,0.1)" stroke="rgba(145,135,110,0.45)" stroke-width="1.2"/>
+          <path d="M30 44 L70 44 Q76 58 76 76" fill="none" stroke="rgba(145,135,110,0.35)" stroke-width="1"/>
+          <rect x="30" y="118" width="40" height="78" rx="2" fill="rgba(255,255,255,0.42)" stroke="rgba(145,135,110,0.35)" stroke-width="1"/>
+          <line x1="30" y1="140" x2="70" y2="140" stroke="rgba(80,70,50,0.15)" stroke-width="0.6"/>
+          <line x1="30" y1="176" x2="70" y2="176" stroke="rgba(80,70,50,0.15)" stroke-width="0.6"/>
+          <text x="50" y="154" text-anchor="middle" fill="rgba(58,10,20,0.75)" font-size="6.5" font-family="Georgia,serif" letter-spacing="0.5">TERRE ROSSE</text>
+          <text x="50" y="165" text-anchor="middle" fill="rgba(58,10,20,0.55)" font-size="5" font-family="Arial,sans-serif">PINOT GRIGIO</text>
+          <text x="50" y="185" text-anchor="middle" fill="rgba(58,10,20,0.4)" font-size="4" font-family="Arial,sans-serif">D.O.C. Friuli</text>
         </svg>
       </div>
       <div class="wine-entry-details">
         <div class="wine-entry-number">03</div>
-        <div class="wine-entry-eyebrow">White Wine · Friuli DOC Grave</div>
+        <div class="wine-entry-eyebrow">D.O.C. Friuli · <span data-lang="en">Aromatic Variety</span><span data-lang="it">Vitigno Aromatico</span></div>
         <h2 class="wine-entry-name">Pinot Grigio</h2>
         <p class="wine-entry-story">
-          Far removed from the mass-produced versions that flooded international markets, the Terre Rosse Pinot Grigio is a wine of genuine Friulian character and substance. The cold nights of the Grave plains lock aromatic freshness into each grape, producing a wine of vibrant acidity, delicate mineral tension, and a finish that lingers with pleasant precision. A wine of honest, unpretentious pleasure.
+          <span data-lang="en">A white, still, dry wine from aromatic grapes. Luminous and transparent straw yellow with good consistency. On smelling it we find intensity, richness and complexity — bread crust and tropical fruits such as banana and pineapple, all enveloped in a spicy veil. The taste is tangy and fresh, but also has an important impact. Pairs well with starters of duck breast, San Daniele ham and medium-aged cheese.</span>
+          <span data-lang="it">Vino bianco, fermo, secco da vitigno aromatico. Giallo paglierino luminoso e trasparente dalla buona consistenza. Annusandolo troviamo intensità, ricchezza e complessità. Riconosciamo la crosta del pane e la frutta tropicale come banana e ananas, il tutto avvolto in un velo di spezie. Il sorso è sapido e fresco, ma importante come impatto. Si abbina bene con antipasti a base di petto d'oca, affettati dolci e formaggi di media stagionatura.</span>
         </p>
         <div class="wine-entry-tech">
-          <div class="tech-item">
-            <div class="tech-label">Grape Variety</div>
-            <div class="tech-value">100% Pinot Grigio</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Style</div>
-            <div class="tech-value">Dry, Fresh, Mineral</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Serving Temperature</div>
-            <div class="tech-value">8 – 10°C</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Alcohol</div>
-            <div class="tech-value">12.0% vol.</div>
-          </div>
+          <div class="tech-item"><div class="tech-label">Uve / Grapes</div><div class="tech-value">100% Pinot Grigio</div></div>
+          <div class="tech-item"><div class="tech-label">Classificazione</div><div class="tech-value">D.O.C. Friuli</div></div>
+          <div class="tech-item"><div class="tech-label">Servire / Serving Temp.</div><div class="tech-value">8°C – 10°C</div></div>
+          <div class="tech-item"><div class="tech-label">Alcol / Alcohol</div><div class="tech-value">12% – 14% vol.</div></div>
+          <div class="tech-item"><div class="tech-label">Allevamento / Training</div><div class="tech-value">Guyot 3300 viti/ha</div></div>
+          <div class="tech-item"><div class="tech-label">Vendemmia / Harvest</div><div class="tech-value"><span data-lang="en">First week of September</span><span data-lang="it">Prima settimana di settembre</span></div></div>
         </div>
         <div class="wine-entry-tasting">
-          <div class="tasting-title">Tasting Notes</div>
+          <div class="tasting-title"><span data-lang="en">Tasting Notes</span><span data-lang="it">Note di Degustazione</span></div>
           <div class="tasting-notes">
-            <span class="tasting-note">Pear</span>
-            <span class="tasting-note">Green Apple</span>
-            <span class="tasting-note">White Flowers</span>
-            <span class="tasting-note">Mineral</span>
-            <span class="tasting-note">Crisp Acidity</span>
+            <span class="tasting-note"><span data-lang="en">Luminous Straw Yellow</span><span data-lang="it">Giallo Paglierino Luminoso</span></span>
+            <span class="tasting-note"><span data-lang="en">Bread Crust</span><span data-lang="it">Crosta di Pane</span></span>
+            <span class="tasting-note"><span data-lang="en">Banana &amp; Pineapple</span><span data-lang="it">Banana &amp; Ananas</span></span>
+            <span class="tasting-note"><span data-lang="en">Spicy Veil</span><span data-lang="it">Velo di Spezie</span></span>
           </div>
         </div>
         <div class="wine-entry-food">
-          <div class="food-title">Food Pairings</div>
+          <div class="food-title"><span data-lang="en">Food Pairings</span><span data-lang="it">Abbinamenti</span></div>
           <div class="food-pairings">
-            <span class="food-tag">Light Salads</span>
-            <span class="food-tag">Steamed Fish</span>
-            <span class="food-tag">Seafood Appetisers</span>
-            <span class="food-tag">Vegetable Dishes</span>
+            <span class="food-tag"><span data-lang="en">Duck Breast Starters</span><span data-lang="it">Antipasti di Petto d'Oca</span></span>
+            <span class="food-tag"><span data-lang="en">San Daniele Ham</span><span data-lang="it">Prosciutto di San Daniele</span></span>
+            <span class="food-tag"><span data-lang="en">Medium-aged Cheeses</span><span data-lang="it">Formaggi a Media Stagionatura</span></span>
           </div>
         </div>
-        <a href="index.html#contact" class="btn btn-dark">
-          View Details
-          <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        <a href="index.html#contact" class="btn btn-dark"><span data-lang="en">Enquire</span><span data-lang="it">Richiedi Info</span> <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </article>
 
     <!-- 4. Sauvignon (reversed) -->
-    <article class="wine-entry reverse" aria-label="Sauvignon">
-      <div class="wine-entry-bottle" style="background:linear-gradient(145deg, #ebf0e0 0%, #e0e8cd 100%)">
-        <svg width="90" height="300" viewBox="0 0 90 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Sauvignon bottle illustration">
-          <rect x="36" y="2" width="18" height="24" rx="4" fill="rgba(120,150,80,0.55)" stroke="rgba(120,150,80,0.4)" stroke-width="0.8"/>
-          <path d="M28 40 Q24 64 22 90 L22 265 Q22 285 45 285 Q68 285 68 265 L68 90 Q66 64 62 40 Z" fill="rgba(140,170,90,0.1)" stroke="rgba(120,150,80,0.45)" stroke-width="1"/>
-          <path d="M28 40 L62 40 Q68 52 68 68" fill="none" stroke="rgba(120,150,80,0.4)" stroke-width="1"/>
-          <rect x="28" y="108" width="34" height="72" rx="1.5" fill="rgba(255,255,255,0.45)" stroke="rgba(60,100,30,0.28)" stroke-width="0.8"/>
-          <line x1="28" y1="128" x2="62" y2="128" stroke="rgba(60,100,30,0.18)" stroke-width="0.5"/>
-          <line x1="28" y1="162" x2="62" y2="162" stroke="rgba(60,100,30,0.18)" stroke-width="0.5"/>
-          <text x="45" y="143" text-anchor="middle" fill="rgba(30,50,10,0.75)" font-size="6.5" font-family="Georgia, serif" letter-spacing="1">TERRE ROSSE</text>
-          <text x="45" y="155" text-anchor="middle" fill="rgba(30,50,10,0.6)" font-size="5" font-family="Arial, sans-serif" letter-spacing="0.5">SAUVIGNON</text>
-          <text x="45" y="174" text-anchor="middle" fill="rgba(30,50,10,0.4)" font-size="4" font-family="Arial, sans-serif">Friuli DOC Grave</text>
+    <article class="wine-entry reverse" id="sauvignon">
+      <div class="wine-entry-bottle">
+        <svg width="100" height="320" viewBox="0 0 100 320" fill="none">
+          <rect x="40" y="2" width="20" height="28" rx="5" fill="rgba(190,200,110,0.45)" stroke="rgba(150,165,70,0.5)" stroke-width="1"/>
+          <path d="M30 44 Q26 70 24 98 L24 284 Q24 300 50 300 Q76 300 76 284 L76 98 Q74 70 70 44 Z" fill="rgba(190,200,110,0.1)" stroke="rgba(150,165,70,0.4)" stroke-width="1.2"/>
+          <path d="M30 44 L70 44 Q76 58 76 76" fill="none" stroke="rgba(150,165,70,0.35)" stroke-width="1"/>
+          <rect x="30" y="118" width="40" height="78" rx="2" fill="rgba(255,255,255,0.45)" stroke="rgba(150,165,70,0.35)" stroke-width="1"/>
+          <line x1="30" y1="140" x2="70" y2="140" stroke="rgba(60,80,20,0.15)" stroke-width="0.6"/>
+          <line x1="30" y1="176" x2="70" y2="176" stroke="rgba(60,80,20,0.15)" stroke-width="0.6"/>
+          <text x="50" y="155" text-anchor="middle" fill="rgba(58,10,20,0.75)" font-size="6.5" font-family="Georgia,serif" letter-spacing="0.5">TERRE ROSSE</text>
+          <text x="50" y="167" text-anchor="middle" fill="rgba(58,10,20,0.55)" font-size="5.5" font-family="Arial,sans-serif">SAUVIGNON</text>
+          <text x="50" y="185" text-anchor="middle" fill="rgba(58,10,20,0.4)" font-size="4" font-family="Arial,sans-serif">D.O.C. Friuli</text>
         </svg>
       </div>
       <div class="wine-entry-details">
         <div class="wine-entry-number">04</div>
-        <div class="wine-entry-eyebrow">White Wine · Aromatic</div>
+        <div class="wine-entry-eyebrow">D.O.C. Friuli · <span data-lang="en">White Wine</span><span data-lang="it">Vino Bianco</span></div>
         <h2 class="wine-entry-name">Sauvignon</h2>
         <p class="wine-entry-story">
-          Intensely aromatic and vibrantly expressive, the Terre Rosse Sauvignon is a wine that announces itself with exuberant confidence. Friuli's cool continental climate is the ideal cradle for this variety — extending the growing season and locking in those characteristic green and tropical aromas that make each glass an olfactory journey. Bright, precise, and thoroughly alive.
+          <span data-lang="en">A white, still, dry wine. Straw yellow with greenish hues. The scents, intense and purposeful, are well blended — green apple, fresh white flowers, then tomato leaf and pepper in quick succession. On the palate it is fresh, fruity and persistent with a very clean finish. Pairs perfectly with bluefish flavoured with herbs.</span>
+          <span data-lang="it">Vino bianco, fermo, secco. Giallo paglierino con riflessi verdastri. I profumi, intensi e fini, si dimostrano ben amalgamati fra loro evidenziando in particolare la mela verde, i fiori bianchi freschi, passando in rapida successione a quelli della foglia di pomodoro e peperone. All'assaggio si dimostra fresco, sapido e persistente. La chiusura è molto pulita. Ottimo con piatti a base di pesce azzurro aromatizzato con erbe officinali.</span>
         </p>
         <div class="wine-entry-tech">
-          <div class="tech-item">
-            <div class="tech-label">Grape Variety</div>
-            <div class="tech-value">100% Sauvignon Blanc</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Style</div>
-            <div class="tech-value">Aromatic, Fresh</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Serving Temperature</div>
-            <div class="tech-value">8 – 10°C</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Alcohol</div>
-            <div class="tech-value">12.5% vol.</div>
-          </div>
+          <div class="tech-item"><div class="tech-label">Uve / Grapes</div><div class="tech-value">100% Sauvignon</div></div>
+          <div class="tech-item"><div class="tech-label">Classificazione</div><div class="tech-value">D.O.C. Friuli</div></div>
+          <div class="tech-item"><div class="tech-label">Servire / Serving Temp.</div><div class="tech-value">8°C – 10°C</div></div>
+          <div class="tech-item"><div class="tech-label">Alcol / Alcohol</div><div class="tech-value">12.5% – 13.5% vol.</div></div>
+          <div class="tech-item"><div class="tech-label">Allevamento / Training</div><div class="tech-value">Guyot 5000 viti/ha</div></div>
+          <div class="tech-item"><div class="tech-label">Vendemmia / Harvest</div><div class="tech-value"><span data-lang="en">First week of September</span><span data-lang="it">Prima settimana di settembre</span></div></div>
         </div>
         <div class="wine-entry-tasting">
-          <div class="tasting-title">Tasting Notes</div>
+          <div class="tasting-title"><span data-lang="en">Tasting Notes</span><span data-lang="it">Note di Degustazione</span></div>
           <div class="tasting-notes">
-            <span class="tasting-note">Elderflower</span>
-            <span class="tasting-note">Grapefruit</span>
-            <span class="tasting-note">Passion Fruit</span>
-            <span class="tasting-note">Green Bell Pepper</span>
-            <span class="tasting-note">Fresh Herbs</span>
+            <span class="tasting-note"><span data-lang="en">Greenish Straw Yellow</span><span data-lang="it">Paglierino con Riflessi Verdi</span></span>
+            <span class="tasting-note"><span data-lang="en">Green Apple</span><span data-lang="it">Mela Verde</span></span>
+            <span class="tasting-note"><span data-lang="en">White Flowers</span><span data-lang="it">Fiori Bianchi</span></span>
+            <span class="tasting-note"><span data-lang="en">Tomato Leaf &amp; Pepper</span><span data-lang="it">Foglia di Pomodoro &amp; Peperone</span></span>
+            <span class="tasting-note"><span data-lang="en">Clean Finish</span><span data-lang="it">Chiusura Pulita</span></span>
           </div>
         </div>
         <div class="wine-entry-food">
-          <div class="food-title">Food Pairings</div>
+          <div class="food-title"><span data-lang="en">Food Pairings</span><span data-lang="it">Abbinamenti</span></div>
           <div class="food-pairings">
-            <span class="food-tag">Asparagus</span>
-            <span class="food-tag">Goat Cheese</span>
-            <span class="food-tag">Grilled Vegetables</span>
-            <span class="food-tag">Thai Cuisine</span>
+            <span class="food-tag"><span data-lang="en">Bluefish with Herbs</span><span data-lang="it">Pesce Azzurro con Erbe</span></span>
+            <span class="food-tag"><span data-lang="en">Light Starters</span><span data-lang="it">Antipasti Leggeri</span></span>
           </div>
         </div>
-        <a href="index.html#contact" class="btn btn-dark">
-          View Details
-          <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        <a href="index.html#contact" class="btn btn-dark"><span data-lang="en">Enquire</span><span data-lang="it">Richiedi Info</span> <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </article>
 
     <!-- 5. Traminer Aromatico -->
-    <article class="wine-entry" aria-label="Traminer Aromatico">
-      <div class="wine-entry-bottle" style="background:linear-gradient(145deg, #f5ede0 0%, #edddd0 100%)">
-        <svg width="90" height="300" viewBox="0 0 90 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Traminer Aromatico bottle illustration">
-          <rect x="36" y="2" width="18" height="24" rx="4" fill="rgba(210,150,100,0.5)" stroke="rgba(210,150,100,0.4)" stroke-width="0.8"/>
-          <path d="M28 40 Q24 64 22 90 L22 265 Q22 285 45 285 Q68 285 68 265 L68 90 Q66 64 62 40 Z" fill="rgba(220,160,100,0.1)" stroke="rgba(200,140,90,0.45)" stroke-width="1"/>
-          <path d="M28 40 L62 40 Q68 52 68 68" fill="none" stroke="rgba(200,140,90,0.4)" stroke-width="1"/>
-          <rect x="28" y="104" width="34" height="80" rx="1.5" fill="rgba(255,255,255,0.45)" stroke="rgba(150,90,40,0.28)" stroke-width="0.8"/>
-          <line x1="28" y1="124" x2="62" y2="124" stroke="rgba(150,90,40,0.18)" stroke-width="0.5"/>
-          <line x1="28" y1="168" x2="62" y2="168" stroke="rgba(150,90,40,0.18)" stroke-width="0.5"/>
-          <text x="45" y="138" text-anchor="middle" fill="rgba(58,10,20,0.8)" font-size="6.5" font-family="Georgia, serif" letter-spacing="1">TERRE ROSSE</text>
-          <text x="45" y="149" text-anchor="middle" fill="rgba(58,10,20,0.6)" font-size="4.5" font-family="Arial, sans-serif" letter-spacing="0.5">TRAMINER</text>
-          <text x="45" y="160" text-anchor="middle" fill="rgba(58,10,20,0.55)" font-size="4.5" font-family="Arial, sans-serif" letter-spacing="0.5">AROMATICO</text>
-          <text x="45" y="178" text-anchor="middle" fill="rgba(58,10,20,0.38)" font-size="4" font-family="Arial, sans-serif">Friuli DOC Grave</text>
+    <article class="wine-entry" id="traminer">
+      <div class="wine-entry-bottle">
+        <svg width="100" height="320" viewBox="0 0 100 320" fill="none">
+          <rect x="40" y="2" width="20" height="28" rx="5" fill="rgba(230,200,120,0.5)" stroke="rgba(200,170,90,0.5)" stroke-width="1"/>
+          <path d="M30 44 Q26 70 24 98 L24 284 Q24 300 50 300 Q76 300 76 284 L76 98 Q74 70 70 44 Z" fill="rgba(230,200,120,0.13)" stroke="rgba(200,170,90,0.5)" stroke-width="1.2"/>
+          <path d="M30 44 L70 44 Q76 58 76 76" fill="none" stroke="rgba(200,170,90,0.38)" stroke-width="1"/>
+          <rect x="30" y="115" width="40" height="84" rx="2" fill="rgba(255,255,255,0.48)" stroke="rgba(197,165,90,0.45)" stroke-width="1"/>
+          <line x1="30" y1="138" x2="70" y2="138" stroke="rgba(100,80,20,0.15)" stroke-width="0.6"/>
+          <line x1="30" y1="179" x2="70" y2="179" stroke="rgba(100,80,20,0.15)" stroke-width="0.6"/>
+          <text x="50" y="150" text-anchor="middle" fill="rgba(58,10,20,0.75)" font-size="6.5" font-family="Georgia,serif" letter-spacing="0.4">TERRE ROSSE</text>
+          <text x="50" y="161" text-anchor="middle" fill="rgba(58,10,20,0.55)" font-size="4.5" font-family="Arial,sans-serif">TRAMINER</text>
+          <text x="50" y="172" text-anchor="middle" fill="rgba(58,10,20,0.45)" font-size="4" font-family="Arial,sans-serif">AROMATICO</text>
+          <text x="50" y="188" text-anchor="middle" fill="rgba(58,10,20,0.35)" font-size="3.8" font-family="Arial,sans-serif">D.O.C. Friuli</text>
         </svg>
       </div>
       <div class="wine-entry-details">
         <div class="wine-entry-number">05</div>
-        <div class="wine-entry-eyebrow">White Wine · Gewürztraminer</div>
+        <div class="wine-entry-eyebrow">D.O.C. Friuli · <span data-lang="en">Aromatic Variety</span><span data-lang="it">Vitigno Aromatico</span></div>
         <h2 class="wine-entry-name">Traminer Aromatico</h2>
         <p class="wine-entry-story">
-          Among the most opulently perfumed white wines produced in Friuli, the Traminer Aromatico of Terre Rosse is a wine of extraordinary floral and spiced intensity. Rose petals, lychee, and exotic fruits weave together in a bouquet of near-impossible abundance. On the palate, richness is tempered by Friuli's natural acidity, creating a wine of genuine complexity and extraordinary aromatic persistence.
+          <span data-lang="en">A white, still, dry wine from aromatic grapes. Straw yellow in colour. Very intense on the nose — floral: lime blossom, ripe fruits, icing sugar and the characteristic, unmistakable rose petal. The taste is tangy and fresh, recalls olfactory sensations and has a very long persistence. An enticing aperitif; also excellent with foie gras, blue cheese, risotto with shrimp or fish dishes.</span>
+          <span data-lang="it">Vino bianco, fermo, secco da vitigno aromatico. Giallo paglierino carico. Molto intenso al naso, floreale: fiori di tiglio, frutta matura, zucchero a velo e il caratteristico ed inconfondibile petalo di rosa. In bocca è sapido e fresco, richiama le sensazioni olfattive ed ha una persistenza lunghissima. Aperitivo accattivante, si presta bene anche agli antipasti a base di patè d'oca, formaggi erborinati, risotto con gamberi o secondi di pesce con tendenza dolce.</span>
         </p>
         <div class="wine-entry-tech">
-          <div class="tech-item">
-            <div class="tech-label">Grape Variety</div>
-            <div class="tech-value">100% Gewürztraminer</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Style</div>
-            <div class="tech-value">Rich, Floral, Spiced</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Serving Temperature</div>
-            <div class="tech-value">10 – 12°C</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Alcohol</div>
-            <div class="tech-value">13.0% vol.</div>
-          </div>
+          <div class="tech-item"><div class="tech-label">Uve / Grapes</div><div class="tech-value">100% Traminer Aromatico</div></div>
+          <div class="tech-item"><div class="tech-label">Classificazione</div><div class="tech-value">D.O.C. Friuli</div></div>
+          <div class="tech-item"><div class="tech-label">Servire / Serving Temp.</div><div class="tech-value">12°C – 14°C</div></div>
+          <div class="tech-item"><div class="tech-label">Alcol / Alcohol</div><div class="tech-value">13% – 14% vol.</div></div>
+          <div class="tech-item"><div class="tech-label">Allevamento / Training</div><div class="tech-value">Guyot 5000 viti/ha</div></div>
+          <div class="tech-item"><div class="tech-label">Vendemmia / Harvest</div><div class="tech-value"><span data-lang="en">Second week of September</span><span data-lang="it">Seconda settimana di settembre</span></div></div>
         </div>
         <div class="wine-entry-tasting">
-          <div class="tasting-title">Tasting Notes</div>
+          <div class="tasting-title"><span data-lang="en">Tasting Notes</span><span data-lang="it">Note di Degustazione</span></div>
           <div class="tasting-notes">
-            <span class="tasting-note">Rose Petals</span>
-            <span class="tasting-note">Lychee</span>
-            <span class="tasting-note">Exotic Fruits</span>
-            <span class="tasting-note">Ginger</span>
-            <span class="tasting-note">Cinnamon</span>
+            <span class="tasting-note"><span data-lang="en">Lime Blossom</span><span data-lang="it">Fiori di Tiglio</span></span>
+            <span class="tasting-note"><span data-lang="en">Rose Petal</span><span data-lang="it">Petalo di Rosa</span></span>
+            <span class="tasting-note"><span data-lang="en">Ripe Fruits</span><span data-lang="it">Frutta Matura</span></span>
+            <span class="tasting-note"><span data-lang="en">Icing Sugar</span><span data-lang="it">Zucchero a Velo</span></span>
+            <span class="tasting-note"><span data-lang="en">Very Long Finish</span><span data-lang="it">Persistenza Lunghissima</span></span>
           </div>
         </div>
         <div class="wine-entry-food">
-          <div class="food-title">Food Pairings</div>
+          <div class="food-title"><span data-lang="en">Food Pairings</span><span data-lang="it">Abbinamenti</span></div>
           <div class="food-pairings">
-            <span class="food-tag">Spiced Asian Cuisine</span>
-            <span class="food-tag">Foie Gras</span>
-            <span class="food-tag">Exotic Cheeses</span>
-            <span class="food-tag">Fruit-based Desserts</span>
+            <span class="food-tag"><span data-lang="en">Foie Gras</span><span data-lang="it">Patè d'Oca</span></span>
+            <span class="food-tag"><span data-lang="en">Blue Cheese</span><span data-lang="it">Formaggi Erborinati</span></span>
+            <span class="food-tag"><span data-lang="en">Shrimp Risotto</span><span data-lang="it">Risotto con Gamberi</span></span>
+            <span class="food-tag"><span data-lang="en">Aperitif</span><span data-lang="it">Aperitivo</span></span>
           </div>
         </div>
-        <a href="index.html#contact" class="btn btn-dark">
-          View Details
-          <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        <a href="index.html#contact" class="btn btn-dark"><span data-lang="en">Enquire</span><span data-lang="it">Richiedi Info</span> <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </article>
 
     <!-- 6. Ribolla Gialla (reversed) -->
-    <article class="wine-entry reverse" aria-label="Ribolla Gialla">
-      <div class="wine-entry-bottle" style="background:linear-gradient(145deg, #f0ecd8 0%, #e8e0c4 100%)">
-        <svg width="90" height="300" viewBox="0 0 90 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ribolla Gialla bottle illustration">
-          <rect x="36" y="2" width="18" height="24" rx="4" fill="rgba(190,168,75,0.6)" stroke="rgba(190,168,75,0.45)" stroke-width="0.8"/>
-          <path d="M28 40 Q24 64 22 90 L22 265 Q22 285 45 285 Q68 285 68 265 L68 90 Q66 64 62 40 Z" fill="rgba(210,185,80,0.12)" stroke="rgba(190,168,75,0.5)" stroke-width="1"/>
-          <path d="M28 40 L62 40 Q68 52 68 68" fill="none" stroke="rgba(190,168,75,0.45)" stroke-width="1"/>
-          <rect x="28" y="104" width="34" height="80" rx="1.5" fill="rgba(255,255,255,0.45)" stroke="rgba(120,100,20,0.28)" stroke-width="0.8"/>
-          <line x1="28" y1="124" x2="62" y2="124" stroke="rgba(120,100,20,0.18)" stroke-width="0.5"/>
-          <line x1="28" y1="168" x2="62" y2="168" stroke="rgba(120,100,20,0.18)" stroke-width="0.5"/>
-          <text x="45" y="138" text-anchor="middle" fill="rgba(58,10,20,0.8)" font-size="6.5" font-family="Georgia, serif" letter-spacing="1">TERRE ROSSE</text>
-          <text x="45" y="149" text-anchor="middle" fill="rgba(58,10,20,0.6)" font-size="4.5" font-family="Arial, sans-serif" letter-spacing="0.5">RIBOLLA</text>
-          <text x="45" y="160" text-anchor="middle" fill="rgba(58,10,20,0.55)" font-size="4.5" font-family="Arial, sans-serif" letter-spacing="0.5">GIALLA</text>
-          <text x="45" y="178" text-anchor="middle" fill="rgba(58,10,20,0.38)" font-size="4" font-family="Arial, sans-serif">Friuli DOC Grave</text>
+    <article class="wine-entry reverse" id="ribolla-gialla">
+      <div class="wine-entry-bottle">
+        <svg width="100" height="320" viewBox="0 0 100 320" fill="none">
+          <rect x="40" y="2" width="20" height="28" rx="5" fill="rgba(210,220,140,0.5)" stroke="rgba(170,185,90,0.5)" stroke-width="1"/>
+          <path d="M30 44 Q26 70 24 98 L24 284 Q24 300 50 300 Q76 300 76 284 L76 98 Q74 70 70 44 Z" fill="rgba(210,220,140,0.1)" stroke="rgba(170,185,90,0.45)" stroke-width="1.2"/>
+          <path d="M30 44 L70 44 Q76 58 76 76" fill="none" stroke="rgba(170,185,90,0.35)" stroke-width="1"/>
+          <rect x="30" y="118" width="40" height="78" rx="2" fill="rgba(255,255,255,0.46)" stroke="rgba(170,185,90,0.35)" stroke-width="1"/>
+          <line x1="30" y1="140" x2="70" y2="140" stroke="rgba(60,80,20,0.15)" stroke-width="0.6"/>
+          <line x1="30" y1="176" x2="70" y2="176" stroke="rgba(60,80,20,0.15)" stroke-width="0.6"/>
+          <text x="50" y="152" text-anchor="middle" fill="rgba(58,10,20,0.75)" font-size="6.5" font-family="Georgia,serif" letter-spacing="0.4">TERRE ROSSE</text>
+          <text x="50" y="163" text-anchor="middle" fill="rgba(58,10,20,0.55)" font-size="5" font-family="Arial,sans-serif">RIBOLLA GIALLA</text>
+          <text x="50" y="185" text-anchor="middle" fill="rgba(58,10,20,0.4)" font-size="4" font-family="Arial,sans-serif">I.G.T. Venezia Giulia</text>
         </svg>
       </div>
       <div class="wine-entry-details">
         <div class="wine-entry-number">06</div>
-        <div class="wine-entry-eyebrow">White Wine · Ancient Friulian Variety</div>
+        <div class="wine-entry-eyebrow">I.G.T. Venezia Giulia · <span data-lang="en">Native Variety</span><span data-lang="it">Vitigno Autoctono</span></div>
         <h2 class="wine-entry-name">Ribolla Gialla</h2>
         <p class="wine-entry-story">
-          One of Friuli's oldest and most celebrated native varieties, Ribolla Gialla is experiencing a magnificent renaissance — and at Terre Rosse, it is handled with the reverence it deserves. This ancient vine produces wines of vivid citrus character, zesty acidity, and a refreshing mineral tension that speaks directly of its home. Clean, bright, and imbued with Friulian identity, Ribolla Gialla is the perfect introduction to the region's extraordinary white wine heritage.
+          <span data-lang="en">A white, still, dry wine from native grapes. Straw yellow with greenish hues. Intense fragrance of iris, lily of the valley, orange blossom and dandelion. The taste has notes of white peach and green apple with a pleasant feeling of citrus and a persistent aftertaste. Excellent as an aperitif; also pairs wonderfully with battered vegetables, light soufflés, cheese and seafood dishes.</span>
+          <span data-lang="it">Vino bianco, fermo, secco da vitigno autoctono. Giallo paglierino con leggeri riflessi verdognoli. Profumi intensi di iris, mughetto, fiori di arancio e tarassaco inebriano il naso. Il palato è appagato dalle note di pesca bianca e mela verde con chiusura su una piacevole sensazione citrina. Buona persistenza del retrogusto. Da degustare come aperitivo, ottimo abbinamento con verdure pastellate, sformati leggeri, formaggi e piatti a base di pesce.</span>
         </p>
         <div class="wine-entry-tech">
-          <div class="tech-item">
-            <div class="tech-label">Grape Variety</div>
-            <div class="tech-value">100% Ribolla Gialla</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Heritage</div>
-            <div class="tech-value">Ancient Native Variety</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Serving Temperature</div>
-            <div class="tech-value">8 – 10°C</div>
-          </div>
-          <div class="tech-item">
-            <div class="tech-label">Alcohol</div>
-            <div class="tech-value">12.0% vol.</div>
-          </div>
+          <div class="tech-item"><div class="tech-label">Uve / Grapes</div><div class="tech-value">100% Ribolla Gialla</div></div>
+          <div class="tech-item"><div class="tech-label">Classificazione</div><div class="tech-value">I.G.T. Venezia Giulia</div></div>
+          <div class="tech-item"><div class="tech-label">Servire / Serving Temp.</div><div class="tech-value">6°C – 8°C</div></div>
+          <div class="tech-item"><div class="tech-label">Alcol / Alcohol</div><div class="tech-value">12% – 13% vol.</div></div>
+          <div class="tech-item"><div class="tech-label">Allevamento / Training</div><div class="tech-value">Guyot 5000 viti/ha</div></div>
+          <div class="tech-item"><div class="tech-label">Vendemmia / Harvest</div><div class="tech-value"><span data-lang="en">Second week of September</span><span data-lang="it">Seconda settimana di settembre</span></div></div>
         </div>
         <div class="wine-entry-tasting">
-          <div class="tasting-title">Tasting Notes</div>
+          <div class="tasting-title"><span data-lang="en">Tasting Notes</span><span data-lang="it">Note di Degustazione</span></div>
           <div class="tasting-notes">
-            <span class="tasting-note">Zesty Citrus</span>
-            <span class="tasting-note">Green Apple</span>
-            <span class="tasting-note">Acacia Blossom</span>
-            <span class="tasting-note">Stone Mineral</span>
-            <span class="tasting-note">Crisp &amp; Lively</span>
+            <span class="tasting-note">Iris &amp; Mughetto</span>
+            <span class="tasting-note"><span data-lang="en">Orange Blossom</span><span data-lang="it">Fiori d'Arancio</span></span>
+            <span class="tasting-note"><span data-lang="en">White Peach</span><span data-lang="it">Pesca Bianca</span></span>
+            <span class="tasting-note"><span data-lang="en">Green Apple</span><span data-lang="it">Mela Verde</span></span>
+            <span class="tasting-note"><span data-lang="en">Citrus Finish</span><span data-lang="it">Finale Citrino</span></span>
           </div>
         </div>
         <div class="wine-entry-food">
-          <div class="food-title">Food Pairings</div>
+          <div class="food-title"><span data-lang="en">Food Pairings</span><span data-lang="it">Abbinamenti</span></div>
           <div class="food-pairings">
-            <span class="food-tag">Aperitivo</span>
-            <span class="food-tag">Light Antipasti</span>
-            <span class="food-tag">Shellfish</span>
-            <span class="food-tag">Fresh Salads</span>
+            <span class="food-tag"><span data-lang="en">Aperitif</span><span data-lang="it">Aperitivo</span></span>
+            <span class="food-tag"><span data-lang="en">Battered Vegetables</span><span data-lang="it">Verdure Pastellate</span></span>
+            <span class="food-tag"><span data-lang="en">Seafood</span><span data-lang="it">Pesce</span></span>
+            <span class="food-tag"><span data-lang="en">Light Soufflés</span><span data-lang="it">Sformati Leggeri</span></span>
           </div>
         </div>
-        <a href="index.html#contact" class="btn btn-dark">
-          View Details
-          <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        </a>
+        <a href="index.html#contact" class="btn btn-dark"><span data-lang="en">Enquire</span><span data-lang="it">Richiedi Info</span> <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
       </div>
     </article>
 
   </div>
 </section>
 
-<!-- CTA Banner -->
-<section class="contact-cta" style="background:var(--wine-deep)">
+<!-- ============================================================
+     SPECIAL WINES DIVIDER
+     ============================================================ -->
+<div class="marquee-band" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Noranse · Orange Wine <span class="marquee-dot"></span></span>
+    <span class="marquee-item">SOLEON · Passito <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Ribolla Gialla Brut · Sparkling <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Specialità di Terre Rosse <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Noranse · Orange Wine <span class="marquee-dot"></span></span>
+    <span class="marquee-item">SOLEON · Passito <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Ribolla Gialla Brut · Sparkling <span class="marquee-dot"></span></span>
+  </div>
+</div>
+
+<!-- ============================================================
+     SPECIAL WINES: Noranse, SOLEON, Ribolla Brut
+     ============================================================ -->
+<section class="wine-catalog" style="background:var(--wine-deep)">
+  <div class="container">
+
+    <!-- Noranse -->
+    <article class="wine-entry" id="noranse" style="border-bottom-color:rgba(197,165,90,0.15);">
+      <div class="wine-entry-bottle" style="background:rgba(255,255,255,0.04);border:1px solid rgba(197,165,90,0.15);">
+        <svg width="100" height="320" viewBox="0 0 100 320" fill="none">
+          <rect x="40" y="2" width="20" height="28" rx="5" fill="rgba(200,130,50,0.65)" stroke="rgba(200,130,50,0.5)" stroke-width="1"/>
+          <path d="M30 44 Q26 70 24 98 L24 284 Q24 300 50 300 Q76 300 76 284 L76 98 Q74 70 70 44 Z" fill="rgba(200,130,50,0.18)" stroke="rgba(200,130,50,0.55)" stroke-width="1.2"/>
+          <path d="M30 44 L70 44 Q76 58 76 76" fill="none" stroke="rgba(200,130,50,0.4)" stroke-width="1"/>
+          <rect x="30" y="118" width="40" height="80" rx="2" fill="rgba(255,255,255,0.08)" stroke="rgba(197,165,90,0.5)" stroke-width="1"/>
+          <line x1="30" y1="140" x2="70" y2="140" stroke="rgba(197,165,90,0.25)" stroke-width="0.6"/>
+          <line x1="30" y1="178" x2="70" y2="178" stroke="rgba(197,165,90,0.25)" stroke-width="0.6"/>
+          <text x="50" y="155" text-anchor="middle" fill="rgba(197,165,90,0.95)" font-size="7" font-family="Georgia,serif" letter-spacing="0.5">TERRE ROSSE</text>
+          <text x="50" y="168" text-anchor="middle" fill="rgba(197,165,90,0.8)" font-size="6.5" font-family="Georgia,serif" font-style="italic">Noranse</text>
+          <text x="50" y="188" text-anchor="middle" fill="rgba(197,165,90,0.5)" font-size="4" font-family="Arial,sans-serif">I.G.T. Venezia Giulia</text>
+        </svg>
+      </div>
+      <div class="wine-entry-details">
+        <div class="wine-entry-number" style="color:rgba(197,165,90,0.12);">07</div>
+        <div class="wine-entry-eyebrow">I.G.T. Venezia Giulia · Orange Wine · <span data-lang="en">Skin-Macerated</span><span data-lang="it">Macerato sulle Bucce</span></div>
+        <h2 class="wine-entry-name" style="color:var(--cream);">Noranse</h2>
+        <p class="wine-entry-story" style="color:rgba(250,246,240,0.62);">
+          <span data-lang="en">A still, dry white wine from macerated white grapes — our extraordinary orange wine. Amber yellow in colour. The bouquet is rich in aromas: yellow flowers, honey, hazelnut, ripe orange, mango and pineapple. On the palate it is balanced and reflects the olfactory sensations, enveloping the mouth with unusual freshness. It finishes with a pleasant citrus sensation with a very long persistence. Pairs beautifully with elaborate first and main courses of meat or fish.</span>
+          <span data-lang="it">Vino bianco, fermo, secco ottenuto da uve macerate di uve bianche — il nostro straordinario orange wine. Color gialla ambrato. Bouquet ricco di profumi: fiori gialli, miele, nocciola, arancia matura, mango e ananas. All'assaggio è equilibrato e rispecchia le sensazioni olfattive, pulendo la bocca con una freschezza insolita. Alla chiusura una piacevole sensazione agrumata con persistenza lunghissima. Da degustare in abbinamento a primi e secondi elaborati a base di carne o pesce.</span>
+        </p>
+        <div class="wine-entry-tech" style="background:rgba(255,255,255,0.04);border-color:rgba(197,165,90,0.15);">
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Uve / Grapes</div><div class="tech-value" style="color:var(--cream);">100% Ribolla Gialla</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Classificazione</div><div class="tech-value" style="color:var(--cream);">I.G.T. Venezia Giulia</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Servire / Serving Temp.</div><div class="tech-value" style="color:var(--cream);">12°C – 16°C</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Alcol / Alcohol</div><div class="tech-value" style="color:var(--cream);">12% – 13% vol.</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Allevamento / Training</div><div class="tech-value" style="color:var(--cream);">Guyot 4166 viti/ha</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Vendemmia / Harvest</div><div class="tech-value" style="color:var(--cream);"><span data-lang="en">Second week of September</span><span data-lang="it">Seconda settimana di settembre</span></div></div>
+        </div>
+        <div class="wine-entry-tasting">
+          <div class="tasting-title" style="color:rgba(250,246,240,0.5);"><span data-lang="en">Tasting Notes</span><span data-lang="it">Note di Degustazione</span></div>
+          <div class="tasting-notes">
+            <span class="tasting-note" style="color:var(--gold);border-color:rgba(197,165,90,0.25);background:rgba(197,165,90,0.06);"><span data-lang="en">Amber Yellow</span><span data-lang="it">Giallo Ambrato</span></span>
+            <span class="tasting-note" style="color:var(--gold);border-color:rgba(197,165,90,0.25);background:rgba(197,165,90,0.06);"><span data-lang="en">Honey &amp; Hazelnut</span><span data-lang="it">Miele &amp; Nocciola</span></span>
+            <span class="tasting-note" style="color:var(--gold);border-color:rgba(197,165,90,0.25);background:rgba(197,165,90,0.06);"><span data-lang="en">Mango &amp; Pineapple</span><span data-lang="it">Mango &amp; Ananas</span></span>
+            <span class="tasting-note" style="color:var(--gold);border-color:rgba(197,165,90,0.25);background:rgba(197,165,90,0.06);"><span data-lang="en">Citrus Finish</span><span data-lang="it">Finale Citrino</span></span>
+          </div>
+        </div>
+        <div class="wine-entry-food">
+          <div class="food-title" style="color:rgba(250,246,240,0.5);"><span data-lang="en">Food Pairings</span><span data-lang="it">Abbinamenti</span></div>
+          <div class="food-pairings">
+            <span class="food-tag" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:rgba(250,246,240,0.7);"><span data-lang="en">Meat Main Courses</span><span data-lang="it">Secondi di Carne</span></span>
+            <span class="food-tag" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:rgba(250,246,240,0.7);"><span data-lang="en">Fish Main Courses</span><span data-lang="it">Secondi di Pesce</span></span>
+            <span class="food-tag" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:rgba(250,246,240,0.7);"><span data-lang="en">Elaborate First Courses</span><span data-lang="it">Primi Elaborati</span></span>
+          </div>
+        </div>
+        <a href="index.html#contact" class="btn btn-gold"><span data-lang="en">Enquire</span><span data-lang="it">Richiedi Info</span> <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </article>
+
+    <!-- SOLEON -->
+    <article class="wine-entry reverse" id="soleon" style="border-bottom-color:rgba(197,165,90,0.15);">
+      <div class="wine-entry-bottle" style="background:rgba(255,255,255,0.04);border:1px solid rgba(197,165,90,0.15);">
+        <svg width="100" height="320" viewBox="0 0 100 320" fill="none">
+          <rect x="40" y="2" width="20" height="28" rx="5" fill="rgba(220,180,60,0.7)" stroke="rgba(197,165,90,0.6)" stroke-width="1"/>
+          <path d="M30 44 Q26 70 24 98 L24 284 Q24 300 50 300 Q76 300 76 284 L76 98 Q74 70 70 44 Z" fill="rgba(220,180,60,0.18)" stroke="rgba(197,165,90,0.55)" stroke-width="1.2"/>
+          <path d="M30 44 L70 44 Q76 58 76 76" fill="none" stroke="rgba(197,165,90,0.4)" stroke-width="1"/>
+          <rect x="28" y="112" width="44" height="92" rx="2" fill="rgba(255,255,255,0.06)" stroke="rgba(197,165,90,0.65)" stroke-width="1.3"/>
+          <line x1="28" y1="135" x2="72" y2="135" stroke="rgba(197,165,90,0.35)" stroke-width="0.8"/>
+          <line x1="28" y1="186" x2="72" y2="186" stroke="rgba(197,165,90,0.35)" stroke-width="0.8"/>
+          <text x="50" y="151" text-anchor="middle" fill="rgba(197,165,90,1)" font-size="7" font-family="Georgia,serif" letter-spacing="0.8">TERRE ROSSE</text>
+          <text x="50" y="167" text-anchor="middle" fill="rgba(197,165,90,0.9)" font-size="7.5" font-family="Georgia,serif" letter-spacing="1.5">SOLEON</text>
+          <text x="50" y="197" text-anchor="middle" fill="rgba(197,165,90,0.55)" font-size="4" font-family="Arial,sans-serif">Verduzzo · D.O.C. Friuli</text>
+        </svg>
+      </div>
+      <div class="wine-entry-details">
+        <div class="wine-entry-number" style="color:rgba(197,165,90,0.12);">08</div>
+        <div class="wine-entry-eyebrow">Verduzzo Friulano D.O.C. Friuli · <span data-lang="en">Dessert Wine · Passito</span><span data-lang="it">Vino Dolce · Passito</span></div>
+        <h2 class="wine-entry-name" style="color:var(--cream);">SOLEON</h2>
+        <p class="wine-entry-story" style="color:rgba(250,246,240,0.62);">
+          <span data-lang="en">Golden and brilliant in colour. The nose is intense, rich in delicate honeyed, citrus and vanilla notes, with nuances of noble rot in the finish. On the palate it is sweet, full-bodied and robust — tannic notes typical of the grape variety are perceived. Hints of honey blend with citrus, accompanied by ripe apricots and figs. The sweetness is extremely well balanced and retains a good freshness. The grapes are left to dry naturally on the plant, giving a high concentration of sugars and aromas. Excellent with dry desserts, almond cakes, pumpkin gnocchi and foie gras.</span>
+          <span data-lang="it">Il suo colore è dorato e brillante. Al naso risulta intenso, ricco di delicate note mielate, agrumate e vanigliate, con sfumature di muffa nobile in chiusura. Al palato è dolce, corposo e robusto. Si percepiscono note tanniche tipiche del vitigno. Sentori di miele si fondono con quelli agrumati, accompagnati da note di albicocche e fichi maturi. La dolcezza è estremamente equilibrata con buona freschezza. Le uve, lasciate appassire naturalmente sulla pianta, donano un'alta concentrazione di zuccheri e aromi. Ottimo con dolci secchi, torte di mandorle, gnocchi di zucca e foie gras.</span>
+        </p>
+        <div class="wine-entry-tech" style="background:rgba(255,255,255,0.04);border-color:rgba(197,165,90,0.15);">
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Uve / Grapes</div><div class="tech-value" style="color:var(--cream);">100% Verduzzo Friulano</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Classificazione</div><div class="tech-value" style="color:var(--cream);">Verduzzo Friulano D.O.C. Friuli</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Servire / Serving Temp.</div><div class="tech-value" style="color:var(--cream);">10°C – 14°C</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Alcol / Alcohol</div><div class="tech-value" style="color:var(--cream);">12.5% – 13.5% vol.</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Allevamento / Training</div><div class="tech-value" style="color:var(--cream);">Guyot 5000 viti/ha</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Vendemmia / Harvest</div><div class="tech-value" style="color:var(--cream);"><span data-lang="en">Last week of September (dried on vine)</span><span data-lang="it">Ultima settimana di settembre (appassimento in pianta)</span></div></div>
+        </div>
+        <div class="wine-entry-tasting">
+          <div class="tasting-title" style="color:rgba(250,246,240,0.5);"><span data-lang="en">Tasting Notes</span><span data-lang="it">Note di Degustazione</span></div>
+          <div class="tasting-notes">
+            <span class="tasting-note" style="color:var(--gold);border-color:rgba(197,165,90,0.25);background:rgba(197,165,90,0.06);"><span data-lang="en">Golden &amp; Brilliant</span><span data-lang="it">Dorato &amp; Brillante</span></span>
+            <span class="tasting-note" style="color:var(--gold);border-color:rgba(197,165,90,0.25);background:rgba(197,165,90,0.06);">Honey &amp; Citrus</span>
+            <span class="tasting-note" style="color:var(--gold);border-color:rgba(197,165,90,0.25);background:rgba(197,165,90,0.06);">Vanilla</span>
+            <span class="tasting-note" style="color:var(--gold);border-color:rgba(197,165,90,0.25);background:rgba(197,165,90,0.06);"><span data-lang="en">Apricot &amp; Figs</span><span data-lang="it">Albicocca &amp; Fichi</span></span>
+            <span class="tasting-note" style="color:var(--gold);border-color:rgba(197,165,90,0.25);background:rgba(197,165,90,0.06);"><span data-lang="en">Noble Rot Nuances</span><span data-lang="it">Muffa Nobile</span></span>
+          </div>
+        </div>
+        <div class="wine-entry-food">
+          <div class="food-title" style="color:rgba(250,246,240,0.5);"><span data-lang="en">Food Pairings</span><span data-lang="it">Abbinamenti</span></div>
+          <div class="food-pairings">
+            <span class="food-tag" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:rgba(250,246,240,0.7);"><span data-lang="en">Almond Cake</span><span data-lang="it">Torta di Mandorle</span></span>
+            <span class="food-tag" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:rgba(250,246,240,0.7);"><span data-lang="en">Foie Gras</span><span data-lang="it">Foie Gras</span></span>
+            <span class="food-tag" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:rgba(250,246,240,0.7);"><span data-lang="en">Mascarpone Desserts</span><span data-lang="it">Dolci al Mascarpone</span></span>
+            <span class="food-tag" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:rgba(250,246,240,0.7);">Ham &amp; Figs</span>
+          </div>
+        </div>
+        <a href="index.html#contact" class="btn btn-gold"><span data-lang="en">Enquire</span><span data-lang="it">Richiedi Info</span> <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </article>
+
+    <!-- Ribolla Gialla Brut -->
+    <article class="wine-entry" id="ribolla-brut" style="border-bottom:none;">
+      <div class="wine-entry-bottle" style="background:rgba(255,255,255,0.04);border:1px solid rgba(197,165,90,0.15);">
+        <svg width="100" height="320" viewBox="0 0 100 320" fill="none">
+          <!-- Flute/sparkling bottle shape -->
+          <rect x="42" y="0" width="16" height="16" rx="3" fill="rgba(197,165,90,0.4)"/>
+          <path d="M38 24 Q32 55 28 90 L28 280 Q28 298 50 298 Q72 298 72 280 L72 90 Q68 55 62 24 Z" fill="rgba(220,210,120,0.1)" stroke="rgba(197,165,90,0.5)" stroke-width="1.1"/>
+          <path d="M38 24 L62 24" stroke="rgba(197,165,90,0.4)" stroke-width="1"/>
+          <!-- Bubbles -->
+          <circle cx="42" cy="220" r="1.5" fill="rgba(255,255,255,0.25)"/>
+          <circle cx="50" cy="200" r="1" fill="rgba(255,255,255,0.2)"/>
+          <circle cx="46" cy="175" r="1.2" fill="rgba(255,255,255,0.2)"/>
+          <circle cx="54" cy="245" r="1" fill="rgba(255,255,255,0.18)"/>
+          <!-- Label -->
+          <rect x="30" y="115" width="40" height="85" rx="2" fill="rgba(255,255,255,0.08)" stroke="rgba(197,165,90,0.5)" stroke-width="1"/>
+          <line x1="30" y1="138" x2="70" y2="138" stroke="rgba(197,165,90,0.3)" stroke-width="0.7"/>
+          <line x1="30" y1="182" x2="70" y2="182" stroke="rgba(197,165,90,0.3)" stroke-width="0.7"/>
+          <text x="50" y="151" text-anchor="middle" fill="rgba(197,165,90,0.95)" font-size="7" font-family="Georgia,serif" letter-spacing="0.5">TERRE ROSSE</text>
+          <text x="50" y="163" text-anchor="middle" fill="rgba(197,165,90,0.78)" font-size="4.5" font-family="Arial,sans-serif">RIBOLLA GIALLA</text>
+          <text x="50" y="173" text-anchor="middle" fill="rgba(197,165,90,0.78)" font-size="5" font-family="Arial,sans-serif">BRUT</text>
+          <text x="50" y="191" text-anchor="middle" fill="rgba(197,165,90,0.48)" font-size="3.8" font-family="Arial,sans-serif">Vino Spumante</text>
+        </svg>
+      </div>
+      <div class="wine-entry-details">
+        <div class="wine-entry-number" style="color:rgba(197,165,90,0.12);">09</div>
+        <div class="wine-entry-eyebrow"><span data-lang="en">Sparkling Wine · Brut · Native Variety</span><span data-lang="it">Vino Spumante · Brut · Vitigno Autoctono</span></div>
+        <h2 class="wine-entry-name" style="color:var(--cream);">Ribolla Gialla Brut</h2>
+        <p class="wine-entry-story" style="color:rgba(250,246,240,0.62);">
+          <span data-lang="en">A brut sparkling wine from native Ribolla Gialla. Sparkling straw yellow with fine and persistent perlage. The nose is of fascinating complexity — intense fragrant yeast notes on first impact slowly give way to delicate floral nuances, then to the most attractive and sweet fruits of white-fleshed peach, green apple and citrus. The endless bubbles give velvety sensations that caress the palate. Good texture, pleasant slight residual sugar. Excellent either alone as an aperitif or throughout a meal.</span>
+          <span data-lang="it">Vino bianco brut da vitigno autoctono. Giallo paglierino, caratterizzato da perlage fine e persistente. Al naso risulta di affascinante complessità. Note intense fragranti di lievito, riscontrabili di primo impatto, lasciano il posto lentamente a delicate sfumature floreali per proseguire verso quelle più accattivanti di pesca a pasta bianca, mela verde e agrumi. Le infinite bollicine danno sensazioni vellutate che accarezzano il palato. In bocca si presenta con buona consistenza, piacevole il leggero residuo zuccherino. Finale persistente e leggermente sapido. Ottimo da solo come aperitivo o anche a tutto pasto.</span>
+        </p>
+        <div class="wine-entry-tech" style="background:rgba(255,255,255,0.04);border-color:rgba(197,165,90,0.15);">
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Uve / Grapes</div><div class="tech-value" style="color:var(--cream);">100% Ribolla Gialla</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Stile / Style</div><div class="tech-value" style="color:var(--cream);">Brut Sparkling</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Servire / Serving Temp.</div><div class="tech-value" style="color:var(--cream);">6°C – 8°C</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Alcol / Alcohol</div><div class="tech-value" style="color:var(--cream);">11.5% – 12.5% vol.</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Allevamento / Training</div><div class="tech-value" style="color:var(--cream);">Guyot 4166 viti/ha</div></div>
+          <div class="tech-item"><div class="tech-label" style="color:rgba(250,246,240,0.45);">Vendemmia / Harvest</div><div class="tech-value" style="color:var(--cream);"><span data-lang="en">Second week of September</span><span data-lang="it">Seconda settimana di settembre</span></div></div>
+        </div>
+        <div class="wine-entry-tasting">
+          <div class="tasting-title" style="color:rgba(250,246,240,0.5);"><span data-lang="en">Tasting Notes</span><span data-lang="it">Note di Degustazione</span></div>
+          <div class="tasting-notes">
+            <span class="tasting-note" style="color:var(--gold);border-color:rgba(197,165,90,0.25);background:rgba(197,165,90,0.06);"><span data-lang="en">Fine Persistent Perlage</span><span data-lang="it">Perlage Fine e Persistente</span></span>
+            <span class="tasting-note" style="color:var(--gold);border-color:rgba(197,165,90,0.25);background:rgba(197,165,90,0.06);"><span data-lang="en">Fragrant Yeast</span><span data-lang="it">Lievito Fragrante</span></span>
+            <span class="tasting-note" style="color:var(--gold);border-color:rgba(197,165,90,0.25);background:rgba(197,165,90,0.06);"><span data-lang="en">White Peach &amp; Green Apple</span><span data-lang="it">Pesca Bianca &amp; Mela Verde</span></span>
+            <span class="tasting-note" style="color:var(--gold);border-color:rgba(197,165,90,0.25);background:rgba(197,165,90,0.06);"><span data-lang="en">Velvety Bubbles</span><span data-lang="it">Bollicine Vellutate</span></span>
+          </div>
+        </div>
+        <div class="wine-entry-food">
+          <div class="food-title" style="color:rgba(250,246,240,0.5);"><span data-lang="en">Food Pairings</span><span data-lang="it">Abbinamenti</span></div>
+          <div class="food-pairings">
+            <span class="food-tag" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:rgba(250,246,240,0.7);"><span data-lang="en">Aperitif</span><span data-lang="it">Aperitivo</span></span>
+            <span class="food-tag" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:rgba(250,246,240,0.7);"><span data-lang="en">Throughout the Meal</span><span data-lang="it">A Tutto Pasto</span></span>
+            <span class="food-tag" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.12);color:rgba(250,246,240,0.7);"><span data-lang="en">Celebrations</span><span data-lang="it">Celebrazioni</span></span>
+          </div>
+        </div>
+        <a href="index.html#contact" class="btn btn-gold"><span data-lang="en">Enquire</span><span data-lang="it">Richiedi Info</span> <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+<!-- Cross-sell CTA -->
+<section class="contact-cta" style="background:var(--warm-cream)">
   <div class="container">
     <div class="contact-cta-inner">
-      <p class="contact-cta-eyebrow reveal">The Collection</p>
+      <p class="contact-cta-eyebrow reveal"><span data-lang="en">Also Discover</span><span data-lang="it">Scopri Anche</span></p>
       <div class="gold-line gold-line--center reveal reveal-delay-1"></div>
-      <h2 class="contact-cta-title reveal reveal-delay-1" style="color:var(--cream)">Explore Our Red Wines</h2>
-      <p class="contact-cta-text reveal reveal-delay-2" style="color:rgba(250,246,240,0.6)">Discover the bold and structured side of Terre Rosse — six powerful red wines that capture the depth and character of Friuli's iron-rich soils.</p>
-      <a href="red-wines.html" class="btn btn-gold reveal reveal-delay-3">
-        Red Wines Collection
-        <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      <h2 class="contact-cta-title reveal reveal-delay-1"><span data-lang="en">Our Red Wines</span><span data-lang="it">I Nostri Vini Rossi</span></h2>
+      <p class="contact-cta-text reveal reveal-delay-2">
+        <span data-lang="en">Six bold reds from the iron-rich soils of Friuli — Cabernet Franc, Merlot, Refosco dal Peduncolo Rosso, Rosso unAmì, Mea Culpa and the flagship Vinea Mea Electa.</span>
+        <span data-lang="it">Sei rossi strutturati dai suoli ferrosi del Friuli — Cabernet Franc, Merlot, Refosco dal Peduncolo Rosso, Rosso unAmì, Mea Culpa e il vino di punta Vinea Mea Electa.</span>
+      </p>
+      <a href="red-wines.html" class="btn btn-dark reveal reveal-delay-3">
+        <span data-lang="en">Red Wines Collection</span><span data-lang="it">Collezione Vini Rossi</span>
+        <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
       </a>
     </div>
   </div>
@@ -555,56 +653,49 @@
 </main>
 
 <!-- FOOTER -->
-<footer class="site-footer" role="contentinfo">
+<footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div>
         <img src="images/logo.png" alt="Terre Rosse Wines" class="footer-logo">
-        <p class="footer-tagline">"Where the earth runs red with iron and the vines yield wines of extraordinary character."</p>
+        <p class="footer-tagline"><span data-lang="en">"Where the earth runs red and the vines yield wines of extraordinary character."</span><span data-lang="it">"Dove la terra è rossa e le viti donano vini di carattere straordinario."</span></p>
         <div class="footer-social">
-          <a href="https://www.facebook.com/TerreRosseAdamo" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
-          </a>
-          <a href="https://www.instagram.com/terrerossewines/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-          </a>
-          <a href="https://www.youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 1.96C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--wine-deep)"/></svg>
-          </a>
+          <a href="https://www.facebook.com/TerreRosseAdamo" target="_blank" rel="noopener" class="footer-social-link"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg></a>
+          <a href="https://www.instagram.com/terrerossewines/" target="_blank" rel="noopener" class="footer-social-link"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
         </div>
       </div>
       <div>
-        <div class="footer-col-title">Navigate</div>
+        <div class="footer-col-title"><span data-lang="en">Navigate</span><span data-lang="it">Navigazione</span></div>
         <div class="footer-links">
           <a href="index.html" class="footer-link">Home</a>
-          <a href="index.html#our-story" class="footer-link">Our Story</a>
-          <a href="red-wines.html" class="footer-link">Red Wines</a>
-          <a href="white-wines.html" class="footer-link">White Wines</a>
+          <a href="red-wines.html" class="footer-link"><span data-lang="en">Red Wines</span><span data-lang="it">Vini Rossi</span></a>
+          <a href="white-wines.html" class="footer-link"><span data-lang="en">White Wines</span><span data-lang="it">Vini Bianchi</span></a>
         </div>
       </div>
       <div>
-        <div class="footer-col-title">White Wines</div>
+        <div class="footer-col-title"><span data-lang="en">White Wines</span><span data-lang="it">Vini Bianchi</span></div>
         <div class="footer-links">
-          <a href="white-wines.html" class="footer-link">Chardonnay</a>
-          <a href="white-wines.html" class="footer-link">Friulano</a>
-          <a href="white-wines.html" class="footer-link">Pinot Grigio</a>
-          <a href="white-wines.html" class="footer-link">Sauvignon</a>
-          <a href="white-wines.html" class="footer-link">Traminer Aromatico</a>
-          <a href="white-wines.html" class="footer-link">Ribolla Gialla</a>
+          <a href="#chardonnay" class="footer-link">Chardonnay</a>
+          <a href="#friulano" class="footer-link">Friulano</a>
+          <a href="#pinot-grigio" class="footer-link">Pinot Grigio</a>
+          <a href="#sauvignon" class="footer-link">Sauvignon</a>
+          <a href="#traminer" class="footer-link">Traminer Aromatico</a>
+          <a href="#ribolla-gialla" class="footer-link">Ribolla Gialla</a>
+          <a href="#noranse" class="footer-link">Noranse</a>
+          <a href="#soleon" class="footer-link">SOLEON</a>
+          <a href="#ribolla-brut" class="footer-link">Ribolla Gialla Brut</a>
         </div>
       </div>
       <div>
-        <div class="footer-col-title">Contact</div>
-        <div class="footer-contact-item"><strong>Address</strong>Cuccana di Bicinicco<br>Friuli DOC Grave, Italy</div>
+        <div class="footer-col-title"><span data-lang="en">Contact</span><span data-lang="it">Contatti</span></div>
+        <div class="footer-contact-item"><strong><span data-lang="en">Address</span><span data-lang="it">Indirizzo</span></strong>Via XXV Aprile, 24<br>33050 Cuccana di Bicinicco, UD</div>
         <div class="footer-contact-item"><strong>Email</strong><a href="mailto:info@terrerossewines.com" style="color:inherit">info@terrerossewines.com</a></div>
+        <div class="footer-contact-item"><strong>Tel.</strong><a href="tel:+393884624685" style="color:inherit">(+39) 388 4624685</a></div>
       </div>
     </div>
     <div class="footer-bottom">
-      <p class="footer-copy">&copy; 2025 Azienda Agricola Terre Rosse di Adamo Lestani. All rights reserved. P.IVA 01982520304</p>
-      <div class="footer-legal">
-        <a href="#">Privacy Policy</a>
-        <a href="#">Cookie Policy</a>
-      </div>
+      <p class="footer-copy">&copy; 2026 Azienda Agricola Terre Rosse di Adamo Lestani. P.IVA 01982520304</p>
+      <div class="footer-legal"><a href="#">Privacy</a><a href="#">Cookie</a></div>
     </div>
   </div>
 </footer>

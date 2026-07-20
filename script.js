@@ -214,25 +214,84 @@ const CountUp = {
 };
 
 /* ============================================================
-   PARALLAX — hero background
+   HERO SCROLL — parallax + content fade + scale
    ============================================================ */
-const Parallax = {
-  init() {
-    const heroBg = document.querySelector('.hero-bg');
-    if (!heroBg || window.innerWidth < 768) return;
+const HeroScroll = {
+  hero: null,
+  heroBg: null,
+  heroContent: null,
+  heroScroll: null,
+  heroParticles: null,
+  heroH: 0,
+  ticking: false,
 
-    let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          const scrolled = window.scrollY;
-          // Move bg at 40% the scroll rate for depth
-          heroBg.style.transform = `translateY(${scrolled * 0.38}px)`;
-          ticking = false;
-        });
-        ticking = true;
-      }
-    }, { passive: true });
+  init() {
+    this.hero        = document.querySelector('.hero');
+    this.heroBg      = document.querySelector('.hero-bg');
+    this.heroOverlay = document.querySelector('.hero-bg-overlay-js');
+    this.heroContent = document.querySelector('.hero-content');
+    this.heroScroll  = document.querySelector('.hero-scroll');
+    this.heroParticles = document.querySelector('.hero-particles');
+    if (!this.hero) return;
+
+    this.heroH = this.hero.offsetHeight;
+    window.addEventListener('resize', () => { this.heroH = this.hero.offsetHeight; }, { passive: true });
+    window.addEventListener('scroll', () => this._onScroll(), { passive: true });
+    this._tick(); // run once immediately
+  },
+
+  _onScroll() {
+    if (!this.ticking) {
+      requestAnimationFrame(() => { this._tick(); this.ticking = false; });
+      this.ticking = true;
+    }
+  },
+
+  _tick() {
+    const sy = window.scrollY;
+    const h  = this.heroH || window.innerHeight;
+    // progress: 0 at top → 1 when hero is fully scrolled past
+    const p  = Math.min(sy / h, 1);
+
+    /* --- Background: parallax + very subtle scale --- */
+    if (this.heroBg) {
+      const bgShift = sy * 0.42;
+      // scale from 1.00 → 1.08 as we scroll through
+      const bgScale = 1 + p * 0.08;
+      this.heroBg.style.transform = `translateY(${bgShift}px) scale(${bgScale})`;
+    }
+
+    /* --- Overlay: deepens as you scroll (cinematic darkness) --- */
+    if (this.heroOverlay) {
+      const overlayAlpha = p * 0.45;
+      this.heroOverlay.style.background = `rgba(10,2,6,${overlayAlpha})`;
+    }
+
+    /* --- Scroll indicator: fades out in the first 8% --- */
+    if (this.heroScroll) {
+      const scrollOpacity = Math.max(0, 1 - p / 0.08);
+      this.heroScroll.style.opacity = scrollOpacity;
+      this.heroScroll.style.transform = `translateX(-50%) translateY(${p * 20}px)`;
+    }
+
+    /* --- Hero content: fades out + drifts up gently --- */
+    if (this.heroContent) {
+      // Start fading at 5%, fully gone at 55%
+      const contentP   = Math.max(0, Math.min(1, (p - 0.05) / 0.5));
+      const opacity     = 1 - contentP;                        // 1 → 0
+      const translateY  = contentP * -40;                      // 0 → -40px
+      const blurVal     = contentP * 6;                        // 0 → 6px (subtle defocus)
+      this.heroContent.style.opacity   = opacity;
+      this.heroContent.style.transform = `translateY(${translateY}px)`;
+      this.heroContent.style.filter    = `blur(${blurVal}px)`;
+      this.heroContent.style.willChange = 'opacity, transform, filter';
+    }
+
+    /* --- Particles: slow down as we scroll (fade via hero overlay) --- */
+    if (this.heroParticles) {
+      const partOpacity = Math.max(0, 1 - p / 0.6);
+      this.heroParticles.style.opacity = partOpacity;
+    }
   }
 };
 
@@ -328,21 +387,39 @@ const TastingGlow = {
 };
 
 /* ============================================================
-   PAGE HERO PARALLAX (wine pages)
+   PAGE HERO PARALLAX + FADE (wine catalog pages)
    ============================================================ */
 const PageHeroParallax = {
   init() {
-    const bg = document.querySelector('.page-hero-bg');
-    if (!bg || window.innerWidth < 768) return;
+    const bg      = document.querySelector('.page-hero-bg');
+    const content = document.querySelector('.page-hero-content');
+    const section = document.querySelector('.page-hero');
+    if (!bg) return;
+
+    const sectionH = section ? section.offsetHeight : window.innerHeight * 0.7;
     let ticking = false;
-    window.addEventListener('scroll', () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          bg.style.transform = `translateY(${window.scrollY * 0.3}px)`;
-          ticking = false;
-        });
-        ticking = true;
+
+    const tick = () => {
+      const sy = window.scrollY;
+      const p  = Math.min(sy / sectionH, 1);
+
+      // Background parallax + subtle scale
+      const bgScale = 1 + p * 0.06;
+      bg.style.transform = `translateY(${sy * 0.32}px) scale(${bgScale})`;
+
+      // Content: fade + lift (starts at 10%, gone at 60%)
+      if (content) {
+        const cp = Math.max(0, Math.min(1, (p - 0.10) / 0.50));
+        content.style.opacity   = 1 - cp;
+        content.style.transform = `translateY(${cp * -30}px)`;
+        content.style.filter    = `blur(${cp * 4}px)`;
       }
+
+      ticking = false;
+    };
+
+    window.addEventListener('scroll', () => {
+      if (!ticking) { requestAnimationFrame(tick); ticking = true; }
     }, { passive: true });
   }
 };
@@ -357,7 +434,7 @@ document.addEventListener('DOMContentLoaded', () => {
   MobileMenu.init();
   ScrollReveal.init();
   CountUp.init();
-  Parallax.init();
+  HeroScroll.init();
   Particles.init();
   Marquee.init();
   SmoothScroll.init();
