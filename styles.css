@@ -267,19 +267,133 @@ span[data-lang="en"] { display: inline; }
 }
 
 .mega-col {
-  padding: 44px 36px;
+  padding: 40px 32px;
   border-right: 1px solid var(--border-color);
   transition: background var(--transition-fast);
 }
 .mega-col:last-child { border-right: none; }
-.mega-col:hover { background: var(--light-cream); }
-.mega-col-img { width: 100%; height: 120px; object-fit: cover; border-radius: 3px; margin-bottom: 18px; }
+.mega-col:hover { background: rgba(250,246,240,0.3); }
+
 .mega-col-eyebrow { font-family: var(--font-sans); font-size: 0.65rem; font-weight: 600; letter-spacing: 0.18em; text-transform: uppercase; color: var(--gold); margin-bottom: 8px; }
-.mega-col-title { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 500; color: var(--wine-deep); margin-bottom: 10px; }
-.mega-col-desc { font-family: var(--font-sans); font-size: 0.8rem; font-weight: 300; color: var(--mid-gray); line-height: 1.7; margin-bottom: 20px; }
-.mega-col-link { display: inline-flex; align-items: center; gap: 8px; font-family: var(--font-sans); font-size: 0.72rem; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--wine-red); transition: gap var(--transition-fast); }
-.mega-col-link:hover { gap: 12px; }
-.mega-col-link svg { width: 12px; height: 12px; }
+.mega-col-title { font-family: var(--font-serif); font-size: 1.25rem; font-weight: 500; color: var(--wine-deep); margin-bottom: 12px; }
+
+.mega-col-links {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0 0;
+}
+.mega-col-links li {
+  margin-bottom: 8px;
+}
+.mega-link {
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  font-weight: 400;
+  color: var(--dark-gray);
+  transition: color var(--transition-fast), transform var(--transition-fast);
+  display: inline-block;
+}
+.mega-link:hover {
+  color: var(--wine-red);
+  transform: translateX(4px);
+}
+
+.mega-col--featured {
+  background: var(--light-cream);
+}
+.mega-featured-card {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 100%;
+}
+.mega-featured-img {
+  flex-shrink: 0;
+  width: 70px;
+  height: 160px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.mega-featured-img img {
+  height: 150px;
+  width: auto;
+  object-fit: contain;
+  filter: drop-shadow(0 12px 24px rgba(58,10,20,0.15));
+  transition: transform var(--transition-slow);
+}
+.mega-featured-card:hover .mega-featured-img img {
+  transform: translateY(-5px) scale(1.05);
+}
+.mega-featured-details {
+  display: flex;
+  flex-direction: column;
+}
+.mega-featured-title {
+  font-family: var(--font-serif);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--wine-deep);
+  margin-top: 4px;
+  margin-bottom: 8px;
+}
+.mega-featured-desc {
+  font-family: var(--font-sans);
+  font-size: 0.78rem;
+  font-weight: 300;
+  color: var(--mid-gray);
+  line-height: 1.6;
+  margin-bottom: 14px;
+}
+
+.mega-cta-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 24px;
+  font-family: var(--font-sans);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--wine-red);
+  border-bottom: 1px solid rgba(201,30,46,0.25);
+  padding-bottom: 2px;
+  transition: gap var(--transition-fast), border-color var(--transition-fast);
+}
+.mega-cta-link:hover {
+  gap: 10px;
+  border-color: var(--wine-red);
+}
+.mega-cta-link svg {
+  width: 10px;
+  height: 10px;
+}
+
+.badge {
+  font-family: var(--font-sans);
+  font-size: 0.58rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  padding: 2px 6px;
+  border-radius: 2px;
+  margin-left: 6px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.badge--orange {
+  background: rgba(220,130,50,0.1);
+  color: #c87a28;
+}
+.badge--gold {
+  background: rgba(122,151,129,0.1);
+  color: var(--gold);
+}
+.badge--sparkling {
+  background: rgba(201,30,46,0.06);
+  color: var(--wine-red);
+}
 
 /* ============================================================
    MOBILE
@@ -745,6 +859,21 @@ span[data-lang="en"] { display: inline; }
   padding: 0;
   min-height: 480px;
   position: relative;
+}
+.wine-entry-bottle::before {
+  content: '';
+  position: absolute;
+  width: 320px;
+  height: 320px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(197,165,90,0.07) 0%, transparent 70%);
+  z-index: 0;
+  pointer-events: none;
+  transition: transform var(--transition-slow), background var(--transition-slow);
+}
+.wine-entry:hover .wine-entry-bottle::before {
+  transform: scale(1.15);
+  background: radial-gradient(circle, rgba(197,165,90,0.12) 0%, transparent 70%);
 }
 .wine-entry-bottle img {
   height: 420px;
