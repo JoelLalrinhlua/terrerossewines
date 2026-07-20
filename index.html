@@ -1,0 +1,627 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title data-en="Terre Rosse Wines — Authentic Wines from the Heart of Friuli" data-it="Terre Rosse Wines — Vini Autentici dal Cuore del Friuli">Terre Rosse Wines — Authentic Wines from the Heart of Friuli</title>
+  <meta name="description" content="Terre Rosse Wines — A family-owned winery in Cuccana di Bicinicco, Friuli DOC Grave. Producing exceptional red, white, orange and sparkling wines.">
+  <meta property="og:title" content="Terre Rosse Wines — Authentic Wines from the Heart of Friuli">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#3A0A14">
+  <link rel="icon" type="image/png" href="images/logo.png">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- ============================================================
+     LANGUAGE TOGGLE (Fixed)
+     ============================================================ -->
+<div class="lang-toggle-wrap" role="group" aria-label="Language selection">
+  <button class="lang-btn active" data-lang="en" aria-label="Switch to English">EN</button>
+  <button class="lang-btn" data-lang="it" aria-label="Passa all'italiano">IT</button>
+</div>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="site-header" role="banner">
+  <div class="header-inner">
+    <nav class="nav-left" aria-label="Primary navigation left">
+      <a href="index.html" class="nav-link active">
+        <span data-lang="en">Home</span><span data-lang="it">Home</span>
+      </a>
+      <a href="#our-story" class="nav-link">
+        <span data-lang="en">Our Story</span><span data-lang="it">La Nostra Storia</span>
+      </a>
+      <div class="wines-trigger nav-link" aria-haspopup="true" aria-expanded="false" tabindex="0">
+        <span data-lang="en">Wines</span><span data-lang="it">Vini</span>
+        <svg class="chevron" viewBox="0 0 10 6" fill="none" aria-hidden="true">
+          <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+    </nav>
+    <div class="header-logo-wrap">
+      <a href="index.html" class="header-logo" aria-label="Terre Rosse Wines — Home">
+        <img src="images/logo.png" alt="Terre Rosse Wines" class="header-logo-light">
+        <img src="images/logo.png" alt="Terre Rosse Wines" class="header-logo-dark" style="display:none">
+      </a>
+    </div>
+    <nav class="nav-right" aria-label="Primary navigation right">
+      <a href="#visit-us" class="nav-link">
+        <span data-lang="en">Visit Us</span><span data-lang="it">Visitaci</span>
+      </a>
+      <a href="#contact" class="nav-link">
+        <span data-lang="en">Contact</span><span data-lang="it">Contatti</span>
+      </a>
+      <button class="mobile-toggle" aria-label="Open navigation menu" aria-expanded="false" aria-controls="mobile-drawer">
+        <span></span><span></span><span></span>
+      </button>
+    </nav>
+  </div>
+</header>
+
+<!-- Mega Menu -->
+<nav class="mega-menu" id="mega-menu" role="navigation">
+  <div class="mega-menu-inner">
+    <a href="red-wines.html" class="mega-col" style="text-decoration:none;display:block">
+      <img src="images/category-red.jpg" alt="Red Wines" class="mega-col-img">
+      <div class="mega-col-eyebrow"><span data-lang="en">Collection</span><span data-lang="it">Collezione</span></div>
+      <div class="mega-col-title"><span data-lang="en">Red Wines</span><span data-lang="it">Vini Rossi</span></div>
+      <p class="mega-col-desc">
+        <span data-lang="en">Bold reds — Cabernet Franc, Merlot, Refosco, Rosso unAmì, Mea Culpa, Vinea Mea Electa.</span>
+        <span data-lang="it">Rossi strutturati — Cabernet Franc, Merlot, Refosco, Rosso unAmì, Mea Culpa, Vinea Mea Electa.</span>
+      </p>
+      <span class="mega-col-link">
+        <span data-lang="en">Explore</span><span data-lang="it">Scopri</span>
+        <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+    <a href="white-wines.html" class="mega-col" style="text-decoration:none;display:block">
+      <img src="images/category-white.jpg" alt="White Wines" class="mega-col-img">
+      <div class="mega-col-eyebrow"><span data-lang="en">Collection</span><span data-lang="it">Collezione</span></div>
+      <div class="mega-col-title"><span data-lang="en">White Wines</span><span data-lang="it">Vini Bianchi</span></div>
+      <p class="mega-col-desc">
+        <span data-lang="en">Elegant whites — Chardonnay, Friulano, Pinot Grigio, Sauvignon, Traminer, Ribolla Gialla.</span>
+        <span data-lang="it">Bianchi eleganti — Chardonnay, Friulano, Pinot Grigio, Sauvignon, Traminer, Ribolla Gialla.</span>
+      </p>
+      <span class="mega-col-link">
+        <span data-lang="en">Explore</span><span data-lang="it">Scopri</span>
+        <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+    <a href="white-wines.html#noranse" class="mega-col" style="text-decoration:none;display:block">
+      <img src="images/category-orange.jpg" alt="Orange Wine" class="mega-col-img">
+      <div class="mega-col-eyebrow"><span data-lang="en">Specialty</span><span data-lang="it">Specialità</span></div>
+      <div class="mega-col-title">Noranse</div>
+      <p class="mega-col-desc">
+        <span data-lang="en">I.G.T. Venezia Giulia. Skin-macerated Ribolla Gialla — amber, complex, extraordinary.</span>
+        <span data-lang="it">I.G.T. Venezia Giulia. Ribolla Gialla macerata sulle bucce — ambrata, complessa, straordinaria.</span>
+      </p>
+      <span class="mega-col-link">
+        <span data-lang="en">Discover</span><span data-lang="it">Scopri</span>
+        <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+    <a href="white-wines.html#ribolla-brut" class="mega-col" style="text-decoration:none;display:block">
+      <img src="images/category-sparkling.jpg" alt="Sparkling Wine" class="mega-col-img">
+      <div class="mega-col-eyebrow"><span data-lang="en">Sparkling</span><span data-lang="it">Spumante</span></div>
+      <div class="mega-col-title">Ribolla Gialla Brut</div>
+      <p class="mega-col-desc">
+        <span data-lang="en">Brut sparkling wine from native Ribolla Gialla — fine persistent perlage, floral and fresh.</span>
+        <span data-lang="it">Spumante brut da Ribolla Gialla autoctona — perlage fine e persistente, floreale e fresco.</span>
+      </p>
+      <span class="mega-col-link">
+        <span data-lang="en">Discover</span><span data-lang="it">Scopri</span>
+        <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </span>
+    </a>
+  </div>
+</nav>
+
+<!-- Mobile Overlay & Drawer -->
+<div class="mobile-overlay" id="mobile-overlay" aria-hidden="true"></div>
+<nav class="mobile-drawer" id="mobile-drawer" aria-label="Mobile navigation">
+  <div class="mobile-drawer-head">
+    <img src="images/logo.png" alt="Terre Rosse Wines">
+    <button class="mobile-close" aria-label="Close navigation">&times;</button>
+  </div>
+  <div class="mobile-nav">
+    <a href="index.html" class="mobile-nav-item"><span data-lang="en">Home</span><span data-lang="it">Home</span></a>
+    <a href="#our-story" class="mobile-nav-item"><span data-lang="en">Our Story</span><span data-lang="it">La Nostra Storia</span></a>
+    <div class="mobile-nav-item" style="color:var(--gold);font-size:0.72rem;letter-spacing:0.15em;text-transform:uppercase;font-family:var(--font-sans);padding-top:20px;">
+      <span data-lang="en">Wines</span><span data-lang="it">Vini</span>
+    </div>
+    <div class="mobile-nav-sub">
+      <a href="red-wines.html" class="mobile-nav-sub-item"><span data-lang="en">Red Wines</span><span data-lang="it">Vini Rossi</span></a>
+      <a href="white-wines.html" class="mobile-nav-sub-item"><span data-lang="en">White Wines</span><span data-lang="it">Vini Bianchi</span></a>
+      <a href="white-wines.html#noranse" class="mobile-nav-sub-item">Noranse (Orange Wine)</a>
+      <a href="white-wines.html#ribolla-brut" class="mobile-nav-sub-item">Ribolla Gialla Brut</a>
+      <a href="white-wines.html#soleon" class="mobile-nav-sub-item">SOLEON (Passito)</a>
+    </div>
+    <a href="#visit-us" class="mobile-nav-item"><span data-lang="en">Visit Us</span><span data-lang="it">Visitaci</span></a>
+    <a href="#contact" class="mobile-nav-item"><span data-lang="en">Contact</span><span data-lang="it">Contatti</span></a>
+    <!-- Mobile lang toggle -->
+    <div style="padding: 20px 32px; display:flex; gap:10px;">
+      <button class="lang-btn" data-lang="en" style="border:1px solid var(--border-color);border-radius:2px;color:var(--mid-gray);flex:1;padding:10px;font-size:0.75rem;letter-spacing:0.1em;">EN</button>
+      <button class="lang-btn" data-lang="it" style="border:1px solid var(--border-color);border-radius:2px;color:var(--mid-gray);flex:1;padding:10px;font-size:0.75rem;letter-spacing:0.1em;">IT</button>
+    </div>
+  </div>
+</nav>
+
+<main id="main-content">
+
+<!-- ============================================================
+     HERO
+     ============================================================ -->
+<section class="hero" aria-label="Hero">
+  <div class="hero-bg" style="background-image:url('images/hero-vineyard.jpg');"></div>
+  <div class="hero-particles" aria-hidden="true"></div>
+  <div class="hero-content">
+    <p class="hero-eyebrow">
+      <span data-lang="en">Friuli DOC Grave · Cuccana di Bicinicco · Est. 1976</span>
+      <span data-lang="it">Friuli DOC Grave · Cuccana di Bicinicco · Dal 1976</span>
+    </p>
+    <h1 class="hero-title">Terre Rosse<br>Wines</h1>
+    <p class="hero-subtitle">
+      <span data-lang="en">Authentic Italian Wines from the Heart of Friuli</span>
+      <span data-lang="it">Vini Italiani Autentici dal Cuore del Friuli</span>
+    </p>
+    <p class="hero-desc">
+      <span data-lang="en">A family winery producing exceptional wines through 20+ years of dedication, tradition and passion on the red iron-rich soils of Friuli Venezia Giulia.</span>
+      <span data-lang="it">Un'azienda familiare che produce vini eccezionali con oltre 20 anni di dedizione, tradizione e passione sulle terre rosse ferrose del Friuli Venezia Giulia.</span>
+    </p>
+    <div class="hero-btns">
+      <a href="#collection" class="btn btn-primary">
+        <span data-lang="en">Explore Our Wines</span><span data-lang="it">Scopri i Vini</span>
+        <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+      <a href="#our-story" class="btn btn-outline">
+        <span data-lang="en">Our Story</span><span data-lang="it">La Nostra Storia</span>
+      </a>
+    </div>
+  </div>
+  <div class="hero-scroll" aria-hidden="true">
+    <div class="scroll-line"></div>
+    <span><span data-lang="en">Scroll</span><span data-lang="it">Scorri</span></span>
+  </div>
+</section>
+
+<!-- ============================================================
+     MARQUEE BAND
+     ============================================================ -->
+<div class="marquee-band" aria-hidden="true">
+  <div class="marquee-track">
+    <span class="marquee-item">Cabernet Franc <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Merlot <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Refosco dal Peduncolo Rosso <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Chardonnay <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Friulano <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Pinot Grigio <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Sauvignon <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Traminer Aromatico <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Ribolla Gialla <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Noranse <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Mea Culpa <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Vinea Mea Electa <span class="marquee-dot"></span></span>
+    <span class="marquee-item">Rosso unAmì <span class="marquee-dot"></span></span>
+    <span class="marquee-item">SOLEON <span class="marquee-dot"></span></span>
+  </div>
+</div>
+
+<!-- ============================================================
+     HERITAGE
+     ============================================================ -->
+<section class="heritage" id="our-story">
+  <div class="container">
+    <div class="heritage-grid">
+      <div class="heritage-img-wrap reveal-left">
+        <img src="images/heritage.jpg" alt="Terre Rosse winery" class="heritage-img">
+        <div class="heritage-img-accent"></div>
+      </div>
+      <div class="heritage-content">
+        <p class="t-eyebrow reveal">
+          <span data-lang="en">Our Heritage</span><span data-lang="it">La Nostra Storia</span>
+        </p>
+        <div class="gold-line reveal reveal-delay-1"></div>
+        <h2 class="heritage-title reveal reveal-delay-1">
+          <span data-lang="en">A Family Legacy<br>Rooted in Friuli</span>
+          <span data-lang="it">Un'Eredità Familiare<br>Radicata nel Friuli</span>
+        </h2>
+        <p class="heritage-text reveal reveal-delay-2">
+          <span data-lang="en">L'Azienda Agricola Terre Rosse has deep agricultural roots in a distant past in the Friuli Venezia Giulia region. For more than twenty years, specialised in wine production in Bicinicco, located in the DOC Friuli Grave Zone — an extraordinary terroir of iron-rich red soils that give the estate its very name.</span>
+          <span data-lang="it">L'Azienda Agricola Terre Rosse affonda le proprie radici agricole in un lontano passato nella regione Friuli Venezia Giulia. Da vent'anni specializzata nella produzione di vino in Bicinicco, nella Zona DOC Friuli Grave — un terroir straordinario di suoli rossi ricchi di ferro che danno all'azienda il suo stesso nome.</span>
+        </p>
+        <p class="heritage-text reveal reveal-delay-2">
+          <span data-lang="en">The Lestani family, founders of the estate, tend the vines with dedication and passion. The quality of Terre Rosse wines has been recognised by Italy's leading wine guides — Veronelli, Bibenda and Vitae — and their excellent value has enabled rapid growth in markets both in Italy and abroad.</span>
+          <span data-lang="it">I membri della famiglia Lestani, fondatori dell'Azienda, si prendono cura delle viti con dedizione e passione. La qualità dei prodotti è stata riconosciuta dalle principali guide di vini nazionali — Veronelli, Bibenda e Vitae — e l'ottimo rapporto qualità-prezzo le ha permesso di conquistare mercati in Italia e all'Estero.</span>
+        </p>
+        <p class="heritage-text reveal reveal-delay-3">
+          <span data-lang="en">Our objective is to pursue quality through careful cluster thinning and selection, alongside agricultural techniques aimed at safeguarding the integrity of the vineyards. Every vine is cultivated with respect for the land, and every bottle is an expression of that commitment.</span>
+          <span data-lang="it">Il nostro obiettivo è perseguire la qualità attraverso un attento diradamento e selezione dei grappoli, nonché tecniche agronomiche finalizzate alla conservazione e all'integrità dei vigneti. Ogni vite è coltivata con rispetto per la terra, e ogni bottiglia è espressione di questo impegno.</span>
+        </p>
+        <div class="heritage-stats reveal reveal-delay-3">
+          <div class="stat-item">
+            <div class="stat-num">
+              <span class="count-up" data-target="20" data-suffix="+">20+</span>
+            </div>
+            <div class="stat-label">
+              <span data-lang="en">Years of Expertise</span><span data-lang="it">Anni di Esperienza</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">
+              <span class="count-up" data-target="15" data-suffix="">15</span>
+            </div>
+            <div class="stat-label">
+              <span data-lang="en">Wine Labels</span><span data-lang="it">Etichette</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-num">
+              <span class="count-up" data-target="3" data-suffix="">3</span>
+            </div>
+            <div class="stat-label">
+              <span data-lang="en">National Awards</span><span data-lang="it">Premi Nazionali</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     COLLECTION
+     ============================================================ -->
+<section class="collection" id="collection">
+  <div class="container">
+    <div class="section-head">
+      <p class="t-eyebrow reveal">
+        <span data-lang="en">The Cellar</span><span data-lang="it">La Cantina</span>
+      </p>
+      <div class="gold-line gold-line--center reveal reveal-delay-1"></div>
+      <h2 class="section-title reveal reveal-delay-1">
+        <span data-lang="en">Our Wines</span><span data-lang="it">I Nostri Vini</span>
+      </h2>
+      <p class="section-subtitle reveal reveal-delay-2">
+        <span data-lang="en">Six expressions of white, six of red, plus an orange wine, a sparkling, and the extraordinary SOLEON passito — all from the unique terroir of Friuli Grave.</span>
+        <span data-lang="it">Sei bianchi, sei rossi, più un vino arancio, uno spumante e lo straordinario passito SOLEON — tutti dall'unico terroir del Friuli Grave.</span>
+      </p>
+    </div>
+    <div class="collection-grid">
+      <a href="white-wines.html" class="collection-card reveal reveal-delay-1">
+        <div class="collection-card-bg" style="background-image:url('images/category-white.jpg');"></div>
+        <div class="collection-card-overlay"></div>
+        <div class="collection-card-content">
+          <div class="collection-card-type"><span data-lang="en">Freshness &amp; Elegance</span><span data-lang="it">Freschezza &amp; Eleganza</span></div>
+          <div class="collection-card-title"><span data-lang="en">White Wines</span><span data-lang="it">Vini Bianchi</span></div>
+          <div class="collection-card-cta">
+            <span data-lang="en">Explore</span><span data-lang="it">Scopri</span>
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </a>
+      <a href="red-wines.html" class="collection-card reveal reveal-delay-2">
+        <div class="collection-card-bg" style="background-image:url('images/category-red.jpg');"></div>
+        <div class="collection-card-overlay"></div>
+        <div class="collection-card-content">
+          <div class="collection-card-type"><span data-lang="en">Character &amp; Structure</span><span data-lang="it">Carattere &amp; Struttura</span></div>
+          <div class="collection-card-title"><span data-lang="en">Red Wines</span><span data-lang="it">Vini Rossi</span></div>
+          <div class="collection-card-cta">
+            <span data-lang="en">Explore</span><span data-lang="it">Scopri</span>
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </a>
+      <a href="white-wines.html#noranse" class="collection-card reveal reveal-delay-3">
+        <div class="collection-card-bg" style="background-image:url('images/category-orange.jpg');"></div>
+        <div class="collection-card-overlay"></div>
+        <div class="collection-card-content">
+          <div class="collection-card-type"><span data-lang="en">Skin-Contact · Amber</span><span data-lang="it">Macerato · Ambrato</span></div>
+          <div class="collection-card-title">Noranse</div>
+          <div class="collection-card-cta">
+            <span data-lang="en">Discover</span><span data-lang="it">Scopri</span>
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </a>
+      <a href="white-wines.html#ribolla-brut" class="collection-card reveal reveal-delay-4">
+        <div class="collection-card-bg" style="background-image:url('images/category-sparkling.jpg');"></div>
+        <div class="collection-card-overlay"></div>
+        <div class="collection-card-content">
+          <div class="collection-card-type"><span data-lang="en">Sparkling · Celebration</span><span data-lang="it">Spumante · Festivo</span></div>
+          <div class="collection-card-title">Ribolla Gialla Brut</div>
+          <div class="collection-card-cta">
+            <span data-lang="en">Discover</span><span data-lang="it">Scopri</span>
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </div>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     FEATURED WINES (from PDF catalog)
+     ============================================================ -->
+<section class="featured-wines">
+  <div class="container">
+    <div class="section-head">
+      <p class="t-eyebrow reveal">
+        <span data-lang="en">From Our Estate</span><span data-lang="it">Dalla Nostra Azienda</span>
+      </p>
+      <div class="gold-line gold-line--center reveal reveal-delay-1"></div>
+      <h2 class="section-title reveal reveal-delay-1">
+        <span data-lang="en">Featured Wines</span><span data-lang="it">Vini in Evidenza</span>
+      </h2>
+      <p class="section-subtitle reveal reveal-delay-2">
+        <span data-lang="en">A curated selection from our full catalog — each a testament to the extraordinary terroir of Friuli.</span>
+        <span data-lang="it">Una selezione dalla nostra gamma completa — ognuno espressione dell'eccezionale terroir friulano.</span>
+      </p>
+    </div>
+    <div class="wines-track">
+
+      <!-- Friulano -->
+      <div class="wine-card reveal reveal-delay-1">
+        <div class="wine-card-img-wrap">
+          <svg class="bottle-placeholder" width="70" height="220" viewBox="0 0 70 220" fill="none">
+            <rect x="28" y="2" width="14" height="18" rx="3" fill="rgba(197,165,90,0.5)"/>
+            <path d="M22 30 Q20 50 18 70 L18 195 Q18 210 35 210 Q52 210 52 195 L52 70 Q50 50 48 30 Z" fill="rgba(197,165,90,0.12)" stroke="rgba(197,165,90,0.5)" stroke-width="0.8"/>
+            <rect x="22" y="80" width="26" height="55" rx="1" fill="rgba(255,255,255,0.08)" stroke="rgba(197,165,90,0.3)" stroke-width="0.5"/>
+            <text x="35" y="102" text-anchor="middle" fill="rgba(197,165,90,0.9)" font-size="5" font-family="Georgia,serif">TERRE ROSSE</text>
+            <text x="35" y="113" text-anchor="middle" fill="rgba(197,165,90,0.65)" font-size="4.5" font-family="Arial,sans-serif">FRIULANO</text>
+            <text x="35" y="123" text-anchor="middle" fill="rgba(197,165,90,0.45)" font-size="3.5" font-family="Arial,sans-serif">D.O.C. Friuli</text>
+          </svg>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-variety">
+            <span data-lang="en">White · D.O.C. Friuli</span><span data-lang="it">Bianco · D.O.C. Friuli</span>
+          </div>
+          <h3 class="wine-card-name">Friulano</h3>
+          <p class="wine-card-note">
+            <span data-lang="en">Hay, pear, fresh white flowers. A fresh and enveloping palate finishing with a delicious almond note — the soul of Friuli.</span>
+            <span data-lang="it">Fieno, pera, fiori bianchi freschi. Fresco e avvolgente al palato con una deliziosa chiusura di mandorla — l'anima del Friuli.</span>
+          </p>
+          <a href="white-wines.html" class="wine-card-link">
+            <span data-lang="en">Learn More</span><span data-lang="it">Scopri</span>
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Merlot -->
+      <div class="wine-card reveal reveal-delay-2">
+        <div class="wine-card-img-wrap">
+          <svg class="bottle-placeholder" width="70" height="220" viewBox="0 0 70 220" fill="none">
+            <rect x="28" y="2" width="14" height="18" rx="3" fill="rgba(139,26,46,0.75)"/>
+            <path d="M22 30 Q20 50 18 70 L18 195 Q18 210 35 210 Q52 210 52 195 L52 70 Q50 50 48 30 Z" fill="rgba(139,26,46,0.18)" stroke="rgba(139,26,46,0.55)" stroke-width="0.8"/>
+            <rect x="22" y="80" width="26" height="55" rx="1" fill="rgba(255,255,255,0.07)" stroke="rgba(197,165,90,0.3)" stroke-width="0.5"/>
+            <text x="35" y="102" text-anchor="middle" fill="rgba(197,165,90,0.9)" font-size="5" font-family="Georgia,serif">TERRE ROSSE</text>
+            <text x="35" y="113" text-anchor="middle" fill="rgba(197,165,90,0.65)" font-size="4.5" font-family="Arial,sans-serif">MERLOT</text>
+            <text x="35" y="123" text-anchor="middle" fill="rgba(197,165,90,0.45)" font-size="3.5" font-family="Arial,sans-serif">D.O.C. Friuli</text>
+          </svg>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-variety">
+            <span data-lang="en">Red · D.O.C. Friuli</span><span data-lang="it">Rosso · D.O.C. Friuli</span>
+          </div>
+          <h3 class="wine-card-name">Merlot</h3>
+          <p class="wine-card-note">
+            <span data-lang="en">Cherry and raspberry with undertones of coffee. Soft tannins, aromatic and fruity with good alcohol and freshness.</span>
+            <span data-lang="it">Ciliegia e lampone con sottofondo di caffè. Tannini morbidi, aromatico e fruttato con buona alcolicità e freschezza.</span>
+          </p>
+          <a href="red-wines.html" class="wine-card-link">
+            <span data-lang="en">Learn More</span><span data-lang="it">Scopri</span>
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Mea Culpa -->
+      <div class="wine-card reveal reveal-delay-3">
+        <div class="wine-card-img-wrap">
+          <svg class="bottle-placeholder" width="70" height="220" viewBox="0 0 70 220" fill="none">
+            <rect x="28" y="2" width="14" height="18" rx="3" fill="rgba(58,10,20,0.9)" stroke="rgba(197,165,90,0.5)" stroke-width="0.5"/>
+            <path d="M22 30 Q20 50 18 70 L18 195 Q18 210 35 210 Q52 210 52 195 L52 70 Q50 50 48 30 Z" fill="rgba(58,10,20,0.22)" stroke="rgba(58,10,20,0.8)" stroke-width="0.8"/>
+            <rect x="22" y="78" width="26" height="60" rx="1" fill="rgba(255,255,255,0.05)" stroke="rgba(197,165,90,0.55)" stroke-width="0.8"/>
+            <text x="35" y="100" text-anchor="middle" fill="rgba(197,165,90,0.95)" font-size="5" font-family="Georgia,serif">TERRE ROSSE</text>
+            <text x="35" y="112" text-anchor="middle" fill="rgba(197,165,90,0.8)" font-size="4.5" font-family="Georgia,serif" font-style="italic">Mea Culpa</text>
+            <text x="35" y="124" text-anchor="middle" fill="rgba(197,165,90,0.5)" font-size="3.5" font-family="Arial,sans-serif">I.G.P. Venezia Giulia</text>
+          </svg>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-variety">
+            <span data-lang="en">Red Passito · I.G.P. Venezia Giulia</span><span data-lang="it">Rosso Passito · I.G.P. Venezia Giulia</span>
+          </div>
+          <h3 class="wine-card-name">Mea Culpa</h3>
+          <p class="wine-card-note">
+            <span data-lang="en">Cherry, blueberry and blackberry wrapped in elegant vanilla. Long aromatic complexity, round tannins, infinite persistence.</span>
+            <span data-lang="it">Ciliegia, mirtillo e mora avvolti in elegante vaniglia. Lunghissima complessità aromatica, tannini rotondi, persistenza infinita.</span>
+          </p>
+          <a href="red-wines.html" class="wine-card-link">
+            <span data-lang="en">Learn More</span><span data-lang="it">Scopri</span>
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Ribolla Gialla Brut -->
+      <div class="wine-card reveal reveal-delay-4">
+        <div class="wine-card-img-wrap">
+          <svg class="bottle-placeholder" width="70" height="220" viewBox="0 0 70 220" fill="none">
+            <rect x="28" y="2" width="14" height="18" rx="3" fill="rgba(197,165,90,0.45)"/>
+            <path d="M22 30 Q20 50 18 70 L18 195 Q18 210 35 210 Q52 210 52 195 L52 70 Q50 50 48 30 Z" fill="rgba(210,185,80,0.1)" stroke="rgba(190,168,75,0.5)" stroke-width="0.8"/>
+            <rect x="22" y="80" width="26" height="58" rx="1" fill="rgba(255,255,255,0.45)" stroke="rgba(120,100,20,0.28)" stroke-width="0.5"/>
+            <text x="35" y="100" text-anchor="middle" fill="rgba(58,10,20,0.8)" font-size="5" font-family="Georgia,serif">TERRE ROSSE</text>
+            <text x="35" y="111" text-anchor="middle" fill="rgba(58,10,20,0.6)" font-size="4" font-family="Arial,sans-serif">RIBOLLA GIALLA</text>
+            <text x="35" y="121" text-anchor="middle" fill="rgba(58,10,20,0.5)" font-size="3.5" font-family="Arial,sans-serif">BRUT</text>
+          </svg>
+        </div>
+        <div class="wine-card-body">
+          <div class="wine-card-variety">
+            <span data-lang="en">Sparkling Brut · Native Variety</span><span data-lang="it">Spumante Brut · Vitigno Autoctono</span>
+          </div>
+          <h3 class="wine-card-name">Ribolla Gialla Brut</h3>
+          <p class="wine-card-note">
+            <span data-lang="en">Fine persistent perlage. Fragrant yeast evolves to floral nuances and white peach. Velvety bubbles, clean and lively.</span>
+            <span data-lang="it">Perlage fine e persistente. Lievito fragrante evolve verso sfumature floreali e pesca bianca. Bollicine vellutate, pulite e vivaci.</span>
+          </p>
+          <a href="white-wines.html#ribolla-brut" class="wine-card-link">
+            <span data-lang="en">Learn More</span><span data-lang="it">Scopri</span>
+            <svg viewBox="0 0 12 12" fill="none"><path d="M2 6H10M7 3L10 6L7 9" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EXPERIENCE
+     ============================================================ -->
+<section class="experience" id="visit-us">
+  <div class="experience-bg" style="background-image:url('https://images.unsplash.com/photo-1510812431401-41d2bd2722f3?w=1920&q=85&auto=format&fit=crop');"></div>
+  <div class="container">
+    <div class="experience-content">
+      <p class="t-eyebrow reveal">
+        <span data-lang="en">Via XXV Aprile, 24 · Cuccana di Bicinicco</span>
+        <span data-lang="it">Via XXV Aprile, 24 · Cuccana di Bicinicco</span>
+      </p>
+      <div class="gold-line reveal reveal-delay-1"></div>
+      <h2 class="experience-title reveal reveal-delay-1">
+        <span data-lang="en">Experience<br>Terre Rosse</span>
+        <span data-lang="it">Vivi<br>Terre Rosse</span>
+      </h2>
+      <p class="experience-text reveal reveal-delay-2">
+        <span data-lang="en">Visit our estate in Cuccana di Bicinicco and walk among vines that have defined this land for generations. Explore our cellar, discover the art of winemaking, and savour our wines. We are open Monday–Friday 8:30–13:00, Thursday and Friday also 16:00–19:00.</span>
+        <span data-lang="it">Visita la nostra azienda a Cuccana di Bicinicco e cammina tra vigneti che definiscono questa terra da generazioni. Esplora la cantina, scopri l'arte della vinificazione e assapora i nostri vini. Aperti lunedì–venerdì 8:30–13:00, giovedì e venerdì anche 16:00–19:00.</span>
+      </p>
+      <a href="#contact" class="btn btn-gold reveal reveal-delay-3">
+        <span data-lang="en">Plan Your Visit</span><span data-lang="it">Prenota una Visita</span>
+        <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CONTACT CTA
+     ============================================================ -->
+<section class="contact-cta" id="contact">
+  <div class="container">
+    <div class="contact-cta-inner">
+      <p class="contact-cta-eyebrow reveal">
+        <span data-lang="en">Get in Touch</span><span data-lang="it">Contattaci</span>
+      </p>
+      <div class="gold-line gold-line--center reveal reveal-delay-1"></div>
+      <h2 class="contact-cta-title reveal reveal-delay-1">
+        <span data-lang="en">Discover Terre Rosse Wines</span>
+        <span data-lang="it">Scopri i Vini Terre Rosse</span>
+      </h2>
+      <p class="contact-cta-text reveal reveal-delay-2">
+        <span data-lang="en">Whether you are a wine enthusiast, sommelier, or restaurateur — we would love to hear from you. Contact us for tastings, orders, or to arrange a visit to the estate.</span>
+        <span data-lang="it">Che siate appassionati, sommelier o ristoratori — saremo felici di sentirvi. Contattateci per degustazioni, ordini o per organizzare una visita all'azienda.</span>
+      </p>
+      <div style="display:flex;gap:16px;justify-content:center;flex-wrap:wrap;" class="reveal reveal-delay-3">
+        <a href="mailto:info@terrerossewines.com" class="btn btn-dark">
+          info@terrerossewines.com
+          <svg viewBox="0 0 14 14" fill="none"><path d="M2 7H12M8 3L12 7L8 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        </a>
+        <a href="tel:+393884624685" class="btn btn-gold">
+          (+39) 388 4624685
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="site-footer" role="contentinfo">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <img src="images/logo.png" alt="Terre Rosse Wines" class="footer-logo">
+        <p class="footer-tagline">
+          <span data-lang="en">"Where the earth runs red and the vines yield wines of extraordinary character."</span>
+          <span data-lang="it">"Dove la terra è rossa e le viti donano vini di carattere straordinario."</span>
+        </p>
+        <div class="footer-social">
+          <a href="https://www.facebook.com/TerreRosseAdamo" target="_blank" rel="noopener" class="footer-social-link" aria-label="Facebook">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 00-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 011-1h3z"/></svg>
+          </a>
+          <a href="https://www.instagram.com/terrerossewines/" target="_blank" rel="noopener" class="footer-social-link" aria-label="Instagram">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1112.63 8 4 4 0 0116 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://www.youtube.com" target="_blank" rel="noopener" class="footer-social-link" aria-label="YouTube">
+            <svg viewBox="0 0 24 24" fill="currentColor"><path d="M22.54 6.42a2.78 2.78 0 00-1.94-1.96C18.88 4 12 4 12 4s-6.88 0-8.6.46A2.78 2.78 0 001.46 6.42 29 29 0 001 12a29 29 0 00.46 5.58 2.78 2.78 0 001.94 1.96C5.12 20 12 20 12 20s6.88 0 8.6-.46a2.78 2.78 0 001.94-1.96A29 29 0 0023 12a29 29 0 00-.46-5.58z"/><polygon points="9.75 15.02 15.5 12 9.75 8.98 9.75 15.02" fill="var(--wine-deep)"/></svg>
+          </a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title"><span data-lang="en">Navigate</span><span data-lang="it">Navigazione</span></div>
+        <div class="footer-links">
+          <a href="index.html" class="footer-link"><span data-lang="en">Home</span><span data-lang="it">Home</span></a>
+          <a href="#our-story" class="footer-link"><span data-lang="en">Our Story</span><span data-lang="it">La Nostra Storia</span></a>
+          <a href="red-wines.html" class="footer-link"><span data-lang="en">Red Wines</span><span data-lang="it">Vini Rossi</span></a>
+          <a href="white-wines.html" class="footer-link"><span data-lang="en">White Wines</span><span data-lang="it">Vini Bianchi</span></a>
+          <a href="white-wines.html#noranse" class="footer-link">Noranse</a>
+          <a href="white-wines.html#ribolla-brut" class="footer-link">Ribolla Gialla Brut</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title"><span data-lang="en">Visit</span><span data-lang="it">Visita</span></div>
+        <div class="footer-links">
+          <a href="#visit-us" class="footer-link"><span data-lang="en">Plan a Visit</span><span data-lang="it">Prenota una Visita</span></a>
+          <a href="#visit-us" class="footer-link"><span data-lang="en">Wine Tastings</span><span data-lang="it">Degustazioni</span></a>
+          <a href="#contact" class="footer-link"><span data-lang="en">Contact</span><span data-lang="it">Contatti</span></a>
+        </div>
+        <div style="margin-top:28px;">
+          <div class="footer-col-title"><span data-lang="en">Hours</span><span data-lang="it">Orari</span></div>
+          <div class="footer-contact-item" style="font-size:0.82rem;">
+            <span data-lang="en">Mon–Wed: 8:30–13:00<br>Thu–Fri: 8:30–13:00 · 16:00–19:00</span>
+            <span data-lang="it">Lun–Mer: 8:30–13:00<br>Gio–Ven: 8:30–13:00 · 16:00–19:00</span>
+          </div>
+        </div>
+      </div>
+      <div>
+        <div class="footer-col-title"><span data-lang="en">Contact</span><span data-lang="it">Contatti</span></div>
+        <div class="footer-contact-item">
+          <strong><span data-lang="en">Address</span><span data-lang="it">Indirizzo</span></strong>
+          Via XXV Aprile, 24<br>33050 Cuccana di Bicinicco<br>Udine, Italia
+        </div>
+        <div class="footer-contact-item">
+          <strong>Email</strong>
+          <a href="mailto:info@terrerossewines.com" style="color:inherit">info@terrerossewines.com</a>
+        </div>
+        <div class="footer-contact-item">
+          <strong><span data-lang="en">Office</span><span data-lang="it">Ufficio</span></strong>
+          <a href="tel:+393884624685" style="color:inherit">(+39) 388 4624685</a>
+        </div>
+        <div class="footer-contact-item">
+          <strong>Adamo Lestani</strong>
+          <a href="tel:+393406071939" style="color:inherit">(+39) 340 6071939</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p class="footer-copy">
+        &copy; 2026 Azienda Agricola Terre Rosse di Adamo Lestani.
+        <span data-lang="en">All rights reserved.</span><span data-lang="it">Tutti i diritti riservati.</span>
+        P.IVA 01982520304 | C.F. LSTDMA76S26L483O
+      </p>
+      <div class="footer-legal">
+        <a href="#"><span data-lang="en">Privacy Policy</span><span data-lang="it">Privacy</span></a>
+        <a href="#"><span data-lang="en">Cookie Policy</span><span data-lang="it">Cookie</span></a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
