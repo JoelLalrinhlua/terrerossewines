@@ -227,7 +227,7 @@ const HeroScroll = {
 
   init() {
     this.hero        = document.querySelector('.hero');
-    this.heroBg      = document.querySelector('.hero-bg');
+    this.heroBg      = document.querySelector('.hero-slides');
     this.heroOverlay = document.querySelector('.hero-bg-overlay-js');
     this.heroContent = document.querySelector('.hero-content');
     this.heroScroll  = document.querySelector('.hero-scroll');
@@ -264,7 +264,7 @@ const HeroScroll = {
     /* --- Overlay: deepens as you scroll (cinematic darkness) --- */
     if (this.heroOverlay) {
       const overlayAlpha = p * 0.45;
-      this.heroOverlay.style.background = `rgba(10,2,6,${overlayAlpha})`;
+      this.heroOverlay.style.background = `rgba(27,32,36,${overlayAlpha})`;
     }
 
     /* --- Scroll indicator: fades out in the first 8% --- */
@@ -294,6 +294,79 @@ const HeroScroll = {
     }
   }
 };
+
+/* ============================================================
+   HERO SLIDESHOW — sequence: img1 -> video -> img2 -> loop
+   ============================================================ */
+const HeroSlideshow = {
+  slides: [],
+  video: null,
+  currentIndex: 0,
+  durations: [4000, 5450, 4000], // Slide durations in ms: img1 (4s), video (5.45s), img2 (4s)
+  timer: null,
+
+  init() {
+    this.slides = document.querySelectorAll('.hero-slide');
+    this.video = document.getElementById('hero-vid');
+    if (!this.slides.length) return;
+
+    // Start with first slide active, video paused
+    this.showSlide(0);
+  },
+
+  showSlide(index) {
+    if (this.timer) clearTimeout(this.timer);
+    
+    // Deactivate current active slide
+    this.slides.forEach(slide => slide.classList.remove('active'));
+    
+    // Stop and reset video if leaving video slide
+    if (this.currentIndex === 1 && this.video) {
+      this.video.pause();
+      this.video.currentTime = 0;
+    }
+
+    this.currentIndex = index;
+    const currentSlide = this.slides[index];
+    currentSlide.classList.add('active');
+
+    let duration = this.durations[index];
+
+    // If it's the video slide, play the video
+    if (index === 1 && this.video) {
+      this.video.currentTime = 0;
+      const playPromise = this.video.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(error => {
+          console.log("Auto-play prevented or failed: ", error);
+        });
+      }
+      
+      // Transition when video ends
+      this.video.onended = () => {
+        this.nextSlide();
+      };
+      
+      // Fallback timer just in case video fails to load or play
+      this.timer = setTimeout(() => {
+        if (this.currentIndex === 1) {
+          this.nextSlide();
+        }
+      }, duration + 1000); // 1s buffer for load time
+    } else {
+      // For images, transition after the set duration
+      this.timer = setTimeout(() => {
+        this.nextSlide();
+      }, duration);
+    }
+  },
+
+  nextSlide() {
+    const nextIndex = (this.currentIndex + 1) % this.slides.length;
+    this.showSlide(nextIndex);
+  }
+};
+
 
 /* ============================================================
    FLOATING PARTICLES — hero section
@@ -435,6 +508,7 @@ document.addEventListener('DOMContentLoaded', () => {
   ScrollReveal.init();
   CountUp.init();
   HeroScroll.init();
+  HeroSlideshow.init();
   Particles.init();
   Marquee.init();
   SmoothScroll.init();
